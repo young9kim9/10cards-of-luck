@@ -1,0 +1,44 @@
+body {
+    background-color: #D6D4CC;
+}
+
+h1 {
+    color: #4BA373;
+    font-size: 110pt;
+    font-family: 'Alfa Slab One', cursive;
+    line-height: 111pt;
+   }
+  
+h4 {
+    color: #4BA373;
+    font-size: 30pt;
+    font-family: 'Majesti Banner';
+    }
+
+li {
+    color: #332309;
+    font-size: 16pt;
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+    background-color: white;
+    border-style: solid;
+    border: 1px solid #4BA373;
+    border-radius: 30%;
+    text-align: center;
+
+}
+
+p {
+    color: #332309;
+    font-size: 14pt;
+    line-height: 22pt;
+    font-family: 'Raleway', sans-serif;
+    }
+
+.div1 {
+    width: 650px;
+}
+
+.div2 {
+    width: 790px;
+}
