@@ -16,6 +16,7 @@ h4 {
     }
 
 li {
+    display: inline-block;
     color: #332309;
     font-size: 16pt;
     font-family: 'Raleway', sans-serif;
@@ -25,6 +26,7 @@ li {
     border: 1px solid #4BA373;
     border-radius: 30%;
     text-align: center;
+    margin-right: 8px;
 
 }
 
