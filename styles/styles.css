@@ -35,10 +35,16 @@ p {
     font-family: 'Raleway', sans-serif;
     }
 
-.div1 {
-    width: 650px;
+span {
+    display: inline-block;
 }
 
-.div2 {
+.span1 {
+    width: 650px;
+    margin-right: 50px;
+    margin-top: 0px;
+}
+
+.span2 {
     width: 790px;
 }
