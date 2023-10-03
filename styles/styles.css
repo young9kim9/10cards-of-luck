@@ -1,52 +1,81 @@
 body {
     background-color: #D6D4CC;
+    margin: 0px;
 }
 
 h1 {
-    color: #4BA373;
+    color: #E86247;
     font-size: 110pt;
     font-family: 'Alfa Slab One', cursive;
     line-height: 111pt;
    }
   
 h4 {
-    color: #4BA373;
+    color: #E86247;
     font-size: 30pt;
     font-family: 'Majesti Banner';
     }
 
-li {
+.keyword {
     display: inline-block;
     color: #332309;
     font-size: 16pt;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway Medium', sans-serif;
     list-style: none;
-    background-color: white;
     border-style: solid;
-    border: 1px solid #4BA373;
-    border-radius: 30%;
     text-align: center;
     margin-right: 8px;
-
-}
+    padding: 8px 20px;
+    border-radius: 21px;
+    border: 0.7px solid #E86247;
+    background: #FFF;
+    box-shadow: 0px 0px 9px 0px rgba(232, 98, 71, 0.50);
+    }
 
 p {
     color: #332309;
     font-size: 14pt;
     line-height: 22pt;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway Light', sans-serif;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    width: 638px;
+    height: 246px;
+    flex-shrink: 0;
     }
 
 span {
     display: inline-block;
 }
 
-.span1 {
+.card {
     width: 650px;
     margin-right: 50px;
     margin-top: 0px;
 }
 
 .span2 {
-    width: 790px;
+    width: 990px;
+}
+
+.dropdown {
+    font-size: 40pt;
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+    padding: 20px 0px;
+    width: 590px;
+    display: inline-block;
+}
+
+.arrow {
+    padding: 10px 10px;
+    align-self: center;
+    display: inline-block;
+}
+
+.dropdownline {
+    width: 638px;
+    height: 1px;
+    flex-shrink: 0;
+    background: #E86247;
 }
