@@ -5,10 +5,15 @@ body {
     justify-content: space-between;
 }
 
+main {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+}
+
 h1 {
     color: #780FE0;
     font-size: 110pt;
-    font-family: 'Limelight';
+    font-family: 'Limelight', sans-serif;
     line-height: 111pt;
     margin: 0px;
     padding-bottom: 40px;
@@ -94,6 +99,7 @@ p {
     top: 0;
     left: 24px;
     width: 650px;
+    height: 1024px;
     margin-right: 50px;
     margin-top: 0px;
     overflow-y: auto;

@@ -1,37 +1,43 @@
 body {
     background-color: #D6D4CC;
     margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 1fr 2fr;
 }
 
 h1 {
     color: #4E5EF6;
     font-size: 110pt;
-    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Alfa Slab One';
     line-height: 111pt;
     margin: 0px;
+    padding-bottom: 40px;
     width: 681px;
     height: 222px;
     display: inline-flex;
+    margin-bottom: 40px;
    }
 
 .right-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 14px;
-    height: 419px;
+    height: 432px;
     background: #F5C96A;
 }
 
 .title {
-    display: inline-flex;
-}
-
-.card-title {
-    display: inline-flex;
+    width: 681px;
+    height: 222px;
+    padding-bottom: 40px;
 }
 
 .bottom-bar {
     width: 765px;
     height: 2px;
-    background: #E86247;
+    background: #4E5EF6;
 }
   
 h4 {
@@ -45,7 +51,7 @@ h4 {
 
 .keyword {
     display: inline-block;
-    color: #332309;
+    color: #780FE0;
     font-size: 16pt;
     font-family: 'Raleway Medium', sans-serif;
     list-style: none;
@@ -54,9 +60,9 @@ h4 {
     margin-right: 8px;
     padding: 8px 20px;
     border-radius: 21px;
-    border: 0.7px solid #E86247;
+    border: 0.7px solid #780FE0;
     background: #FFF;
-    box-shadow: 0px 0px 9px 0px rgba(232, 98, 71, 0.50);
+    box-shadow: 0px 0px 9px 0px rgba(120, 15, 224, 0.50);
     }
 
 p {
@@ -72,22 +78,34 @@ p {
     }
 
 .home-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 24px;
     height: 1024px;
     background: #040101;
     display: inline-block;
+    overflow-y: auto;
 }
 
 .card {
     display: inline-flex;
+    position: fixed;
+    flex: 1;
+    top: 0;
+    left: 24px;
     width: 650px;
     margin-right: 50px;
     margin-top: 0px;
+    overflow-y: auto;
 }
 
 .content {
     display: inline-block;
+    margin-left: 715px;
+    flex: 2;
     width: 990px;
+    width: calc(100% - 990px);
 }
 
 .dropdown {
@@ -109,7 +127,7 @@ p {
     width: 638px;
     height: 1px;
     flex-shrink: 0;
-    background: #E86247;
+    background: #780FE0;
 }
 
 .dropdown-box {
@@ -117,6 +135,7 @@ p {
     height: 145px;
     background: white;
     display: inline-block;
+    position: relative;
 }
 
 .dropdown-txt {
@@ -128,4 +147,7 @@ p {
     width: 585px;
     height: 103px;
     display: inline-block;
+    position: absolute;
+    top: 950px;
+    left: 750px;
 }
