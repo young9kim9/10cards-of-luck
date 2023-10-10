@@ -1,36 +1,31 @@
 body {
     background-color: #D6D4CC;
     margin: 0px;
-    display: flex;
-    justify-content: space-between;
 }
 
 h1 {
     color: #780FE0;
     font-size: 110pt;
-    font-family: 'Limelight';
+    font-family: 'Alfa Slab One', cursive;
     line-height: 111pt;
     margin: 0px;
-    padding-bottom: 40px;
     width: 681px;
     height: 222px;
     display: inline-flex;
-    margin-bottom: 40px;
    }
 
 .right-bar {
-    position: absolute;
-    top: 0;
-    right: 0;
     width: 14px;
-    height: 432px;
+    height: 419px;
     background: #FF93B7;
 }
 
 .title {
     display: inline-flex;
-    width: 711px;
-    height: 250px;
+}
+
+.card-title {
+    display: inline-flex;
 }
 
 .bottom-bar {
@@ -77,34 +72,22 @@ p {
     }
 
 .home-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 24px;
     height: 1024px;
     background: #040101;
     display: inline-block;
-    overflow-y: auto;
 }
 
 .card {
     display: inline-flex;
-    position: fixed;
-    flex: 1;
-    top: 0;
-    left: 24px;
     width: 650px;
     margin-right: 50px;
     margin-top: 0px;
-    overflow-y: auto;
 }
 
 .content {
     display: inline-block;
-    margin-left: 715px;
-    flex: 2;
     width: 990px;
-    width: calc(100% - 990px);
 }
 
 .dropdown {
@@ -134,7 +117,6 @@ p {
     height: 145px;
     background: white;
     display: inline-block;
-    position: relative;
 }
 
 .dropdown-txt {
@@ -146,7 +128,4 @@ p {
     width: 585px;
     height: 103px;
     display: inline-block;
-    position: absolute;
-    top: 950px;
-    left: 750px;
 }
