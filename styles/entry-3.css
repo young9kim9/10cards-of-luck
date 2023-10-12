@@ -1,22 +1,44 @@
 body {
     background-color: #D6D4CC;
     margin: 0px;
-    display: flex;
+    display: grid;
+    gap: 0px;
     justify-content: space-between;
-    grid-template-columns: 1fr 2fr;
-}
+    grid-template-columns: 4fr 6fr;
+    }
+
+.card {
+    grid-column: 1;
+    position: fixed;
+    top: 0;
+    left: 24px;
+    margin-top: 0px;
+    overflow-y: auto;
+    }
+
+.content {
+    grid-column: 2;
+    position: static;
+    }
+
+h4 {
+    color: #4E5EF6;
+    font-size: 30pt;
+    font-family: 'Majesti Banner';
+    padding-top: 119px;
+    margin-bottom: 2px;
+    margin-left: 40px;
+    }
 
 h1 {
     color: #4E5EF6;
     font-size: 110pt;
     font-family: 'Alfa Slab One';
     line-height: 111pt;
-    margin: 0px;
-    padding-bottom: 40px;
-    width: 681px;
-    height: 222px;
-    display: inline-flex;
+    margin-top: 0;
     margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 44px;
    }
 
 .right-bar {
@@ -24,57 +46,79 @@ h1 {
     top: 0;
     right: 0;
     width: 14px;
-    height: 432px;
+    height: 419px;
     background: #F5C96A;
-}
-
-.title {
-    width: 681px;
-    height: 222px;
-    padding-bottom: 40px;
-}
-
-.bottom-bar {
-    width: 765px;
-    height: 2px;
-    background: #4E5EF6;
-}
-  
-h4 {
-    color: #4E5EF6;
-    font-size: 30pt;
-    font-family: 'Majesti Banner';
-    margin: 0px;
-    padding-top: 119px;
-    padding-bottom: 2px;
     }
 
-.keyword {
-    display: inline-block;
-    color: #780FE0;
+.bottom-bar {
+    width: 100%;
+    height: 2px;
+    background: #4E5EF6;
+    margin-bottom: 40px;
+    }
+
+.keywords-group {
+    padding-left: 40px;
+    font-family: "azo-sans-web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 16pt;
-    font-family: 'Raleway Medium', sans-serif;
+}
+
+.keyword-on {
+    display: inline-block;
+    color: #4E5EF6;
     list-style: none;
     border-style: solid;
     text-align: center;
-    margin-right: 8px;
+    margin-right: 6px;
     padding: 8px 20px;
-    border-radius: 21px;
-    border: 0.7px solid #780FE0;
+    border-radius: 23px;
+    border: 1px solid #4E5EF6;
     background: #FFF;
-    box-shadow: 0px 0px 9px 0px rgba(120, 15, 224, 0.50);
+    box-shadow: 0px 0px 9px 0px rgba(78, 94, 246, 0.50);
     }
+
+.keyword-off {
+    display: inline-block;
+    color: #4E5EF6;
+    list-style: none;
+    border-style: solid;
+    text-align: center;
+    margin-right: 6px;
+    padding: 8px 20px;
+    border-radius: 23px;
+    border: 1px solid #4E5EF6;
+    background: #D6D4CC;
+    }
+
+.keyword-dropdown {
+    position: relative;
+    text-align: center;
+    font-family: "azo-sans-web", sans-serif;
+    font-weight: 400;
+    color: #4E5EF6;
+    font-size: 14pt;
+}
+
+.keyword-dropdown-txt {
+    position: absolute;
+    top: 42%;
+    bottom: 58%;
+    left: 40px;
+}
 
 p {
     color: #332309;
     font-size: 14pt;
     line-height: 22pt;
-    font-family: 'Raleway Light', sans-serif;
-    margin-bottom: 70px;
-    margin-top: 40px;
-    width: 638px;
-    height: 246px;
-    flex-shrink: 0;
+    font-family: "azo-sans-web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 70px;
+    padding-top: 40px;    
+    padding-left: 40px;
+    margin-right: 250px;
     }
 
 .home-bar {
@@ -84,70 +128,45 @@ p {
     width: 24px;
     height: 1024px;
     background: #040101;
-    display: inline-block;
     overflow-y: auto;
-}
-
-.card {
-    display: inline-flex;
-    position: fixed;
-    flex: 1;
-    top: 0;
-    left: 24px;
-    width: 650px;
-    margin-right: 50px;
-    margin-top: 0px;
-    overflow-y: auto;
-}
-
-.content {
-    display: inline-block;
-    margin-left: 715px;
-    flex: 2;
-    width: 990px;
-    width: calc(100% - 990px);
-}
+    }
 
 .dropdown {
+    margin-left: 40px;
+    margin-right: 250px;
+    margin-bottom: 70px;
+}
+
+.dropdown-title {
     font-size: 40pt;
-    font-family: 'Raleway', sans-serif;
+    font-family: "azo-sans-web", sans-serif;
+    font-weight: 400;
     list-style: none;
     padding: 20px 0px;
-    width: 590px;
+    margin-right: 490px;
     display: inline-block;
-}
+    }
 
 .arrow {
     padding: 10px 10px;
     align-self: center;
     display: inline-block;
-}
+    }
 
 .dropdown-line {
-    width: 638px;
     height: 1px;
     flex-shrink: 0;
-    background: #780FE0;
-}
-
-.dropdown-box {
-    width: 638px;
-    height: 145px;
-    background: white;
-    display: inline-block;
-    position: relative;
-}
+    background: #4E5EF6;
+    }
 
 .dropdown-txt {
     color: #332309;
     font-size: 18px;
-    font-family: 'Raleway Light';
-    font-weight: 300;
+    font-family: "azo-sans-web", sans-serif;
+    font-weight: 400;
     line-height: 25px;
-    width: 585px;
-    height: 103px;
-    display: inline-block;
-    position: absolute;
     top: 950px;
     left: 750px;
-}
+    background: #FFF;
+    padding: 20px 26px;
+    }
