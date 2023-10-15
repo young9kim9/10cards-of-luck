@@ -1,0 +1,46 @@
+/*
+.grid-container {
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+}
+*/
+
+body {
+	background: linear-gradient(-45deg, #DDC49D, #2D2314);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 90%;
+	}
+	50% {
+		background-position: 50% 100%;
+	}
+	100% {
+		background-position: 0% 90%;
+	}
+}
+
+.header { 
+    height: 90px;
+    position: relative;
+    padding-top: 40px;
+  }
+
+a {
+    position: absolute;  
+    left: 50%;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Majesti Banner';
+    font-weight: 600;
+    font-size: 155pt;
+    line-height: 135pt;
+    letter-spacing: -5pt;
+    color: white;
+}
