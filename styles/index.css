@@ -6,33 +6,39 @@
 */
 
 body {
-	background: linear-gradient(-45deg, #DDC49D, #2D2314);
-	background-size: 400% 400%;
+	background: linear-gradient(145deg, #8e9b72, #60694d, #2D2314);
+	background-size: 1000% 1000%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
 }
 
 @keyframes gradient {
 	0% {
-		background-position: 0% 90%;
+		background-position: 90% 90%;
 	}
 	50% {
-		background-position: 50% 100%;
+		background-position: 90% 0%;
 	}
 	100% {
-		background-position: 0% 90%;
+		background-position: 90% 90%;
 	}
 }
 
 .header { 
     height: 90px;
     position: relative;
-    padding-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    scale: 90%;
   }
 
-a {
+.header a {
     position: absolute;  
-    left: 50%;
+    left: 48%;
+}
+
+.header a:hover {
+    opacity: 30%;
 }
 
 h1 {
@@ -43,4 +49,252 @@ h1 {
     line-height: 135pt;
     letter-spacing: -5pt;
     color: white;
+    z-index: 9;
+    position: relative;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s;
 }
+
+h1:hover {
+    transform: scale(1.05);
+}
+
+
+/*
+* {margin: 0; padding: 0;}
+
+.card {
+  position: relative;
+  float: left;
+  width: 305px;
+  height: 480px;
+  border-radius: 10px;
+  background: white;
+  -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+}
+
+.suitdiamonds:before, .suitdiamonds:after {
+  content: "♦";
+  color: #ff0000;
+}
+
+.suithearts:before, .suithearts:after {
+  content: "♥";
+  color: #ff0000;
+}
+
+.suitclubs:before, .suitclubs:after {
+  content: "♣";
+  color: #000;
+}
+
+.suitspades:before, .suitspades:after {
+
+}
+
+div[class*='suit']:before {
+  position: absolute;
+}
+
+div[class*='suit']:after {
+  position: absolute;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.spread {
+  width: 350px;
+  height: 250px;
+  position: absolute;
+}
+
+.spread > .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: top 0.3s ease, left 0.3s ease;
+  -moz-transition: top 0.3s ease, left 0.3s ease;
+  -o-transition: top 0.3s ease, left 0.3s ease;
+  -ms-transition: top 0.3s ease, left 0.3s ease;
+  transition: top 0.3s ease, left 0.3s ease;
+}
+
+.spread:hover .suitdiamonds {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+.spread:hover .suithearts {
+  left: 30px;
+  top: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.spread:hover .suitclubs {
+  left: 60px;
+  top: 5px;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+.spread:hover .suitspades{
+  left: 80px;
+  top: 10px;
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+.spread > .card:hover {
+  -webkit-box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
+  box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
+}
+*/
+
+li {
+    display: inline-block;
+    position: absolute;
+}
+
+
+/* cards */
+.cards {
+  position:absolute;
+  height: 60%;
+  width: 80%;
+  left: 10%;
+  margin-top: 20px;
+}
+
+.cards:hover .card1 {
+  transform: translate(-50%, -50%) rotate(10deg);
+}
+
+.cards:hover .card2 {
+    transform: translate(-50%, -50%) rotate(5deg);
+  }
+
+.cards:hover .card3 {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+  
+.cards:hover .card4 {
+    transform: translate(-50%, -50%) rotate(-5deg);
+  }
+
+.cards:hover .card5 {
+    transform: translate(-50%, -50%) rotate(-10deg);
+  }
+
+.card1 {
+  background: white;
+  background-size: cover;
+  height: 480px;
+  width: 305px;
+  border-radius: 10px;
+  position: absolute;
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.3);
+  left: 50%;
+  top: 50%;
+  transform-origin: center 120%;
+  transition: transform 1s ease-out;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.card2 {
+    background: white;
+    background-size: cover;
+    height: 480px;
+    width: 305px;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.3);
+    left: 50%;
+    top: 50%;
+    transform-origin: center 120%;
+    transition: transform 1s ease-out;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+.card3 {
+    background: white;
+    background-size: cover;
+    height: 480px;
+    width: 305px;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.3);
+    left: 50%;
+    top: 50%;
+    transform-origin: center 120%;
+    transition: transform 1s ease-out;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }  
+  
+.card4 {
+    background: white;
+    background-size: cover;
+    height: 480px;
+    width: 305px;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.3);
+    left: 50%;
+    top: 50%;
+    transform-origin: center 120%;
+    transition: transform 1s ease-out;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+.card5 {
+    background: white;
+    background-size: cover;
+    height: 480px;
+    width: 305px;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.3);
+    left: 50%;
+    top: 50%;
+    transform-origin: center 120%;
+    transition: transform 1s ease-out;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+
+footer {
+    padding: 45px 0 40px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #7f817a;
+    font-family: "azo-sans-web", sans-serif;
+  }
+  
+.row {
+    display: flex; /* Use a flexbox container */
+    justify-content: space-between; /* Distribute columns evenly */
+    align-items: center; /* Vertically center content */
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+.column {
+    width: 450px; /* Divide the space into three equal columns with a little spacing */
+    padding: 5px;
+  }
+  
