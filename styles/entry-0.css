@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Majesti Banner';
-  src: url(fonts/Majesti-Banner-Bold.otf) format(opentype);
+  src: url(../fonts/Majesti-Banner-Bold.otf) format(opentype);
 }
 
 body {
@@ -140,3 +140,22 @@ body {
     box-shadow: 0 0 32px rgba(255, 229, 160, 0.6);
   }
   
+.card6 {
+    background: white;
+    background-size: cover;
+    height: 480px;
+    width: 305px;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
+    left: 10%;
+    top: 50%;
+    transform-origin: center 120%;
+    transition: transform 0.5s ease-out;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+.card6:hover{
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 32px rgba(255, 229, 160, 0.6);
+  }
