@@ -9,28 +9,63 @@ body {
   background-color: #D6D4CC;
   margin: 0; 
   padding: 0;  
+  overflow-x: hidden;
   }
 
 main {
-  width:100vw;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns: 4fr 6fr;
-  gap: 0px;
-  justify-content: space-between;
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   }
 
 .card {
-  position: sticky;
-  height: 100vh;
-  grid-column: 1;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  flex-shrink: 0;
+  height: 100vh; 
   top: 0;
-  margin-top: 0px;
+  left: 0;
   }
 
+.card img {
+  -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0, 0, 0, .6) 50%,#000 75%);
+  mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.6) 50%,#000 75%);
+  -webkit-mask-size: 800%;
+  mask-size: 800%;
+  -webkit-mask-position: 0;
+  mask-position: 0;
+}
+
+.card img:hover {
+  transition: mask-position 2s ease,-webkit-mask-position 2s ease;
+  -webkit-mask-position: 120%;
+  mask-position: 120%;
+  opacity: 1;
+}
+
 .content {
-  grid-column: 2;
+  flex: 1;
+  overflow-y: auto;
+  margin-left: 0;
   }
+
+@media only screen and (min-width: 769px) {
+  main {
+    flex-direction: row;
+    }
+
+  .card {
+    width: 45%;
+    position:fixed;
+    }
+
+  .content {
+    margin-left: 45%;
+    margin-top: 0;
+    }
+}
 
 .back-button {
   @extend %bg;
@@ -46,25 +81,137 @@ main {
 
 h4 {
     color: #6045D0;
-    font-size: 30pt;
+    font-size: 30px;
     font-family: 'Majesti Banner';
     padding-top: 119px;
     margin-bottom: 2px;
     margin-left: 40px;
     }
 
+
+
 h1 {
     color: #6045D0;
-    font-size: 170pt;
+    font-size: 180px;
     font-family: 'Akira Expanded';
-    line-height: 145pt;
+    line-height: 155px;
     letter-spacing: -1%;
     margin-top: 0;
     margin-bottom: 40px;
     margin-left: 40px;
     margin-right: 44px;
+    transition: font-size 0.5s ease;
    }
 
+@media only screen and (min-width: 1440px) {
+  h1 {
+    font-size: 180px; /* Adjust font size for screens 1440px and larger */
+  }
+
+  .accordion label {
+    margin-left: 90%;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  h1 {
+    font-size: 180px; /* Adjust font size for screens 1440px and larger */
+  }
+
+  .accordion label {
+    margin-left: 90%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  h1 {
+    font-size: 150px;
+    line-height: 130px;
+  }
+
+  .accordion label {
+    margin-left: 70%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  h1 {
+    font-size: 130px;
+    line-height: 110px;
+  }
+
+  .accordion label {
+    margin-left: 60%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size: 120px;
+    line-height: 100px;
+  }
+
+  .accordion label {
+    margin-left: 50%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  h1 {
+    font-size: 100px;
+    line-height: 90px;
+  }
+
+  .accordion label {
+    margin-left: 40%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 160px;
+    line-height: 140px;
+  }
+  .content {
+    margin-top: 120%;
+  }
+
+  .accordion label {
+    margin-left: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 140px;
+    line-height: 120px;
+  }
+  .content {
+    margin-top: 150%;
+  }
+
+  .accordion label {
+    margin-left: 60%;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  h1 {
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  .content {
+    margin-top: 160%;
+  }
+
+  .accordion label {
+    margin-left: 45%;
+  }
+
+}
+
+/*
 .right-bar {
     position: absolute;
     top: 0;
@@ -72,7 +219,27 @@ h1 {
     width: 51px;
     height: 595px;
     background: #57A862;
+    display: block;
     }
+
+@media only screen and (max-width: 767px) {
+  .right-bar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .right-bar {
+    height: 50vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .right-bar {
+    height: 75vh;
+  }
+}
+*/
 
 .bottom-bar {
     width: 100%;
@@ -80,17 +247,7 @@ h1 {
     background: #6045D0;
     margin-bottom: 40px;
     }
-
-.keywords-group {
-    padding-left: 40px;
-    font-family: "azo-sans-web", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16pt;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
+/*
 .keyword-on {
     display: inline-block;
     color: #6045D0;
@@ -98,6 +255,7 @@ h1 {
     border-style: solid;
     text-align: center;
     margin-right: 6px;
+    margin-bottom: 10px;
     padding: 8px 20px;
     border-radius: 23px;
     border: 1px solid #6045D0;
@@ -112,55 +270,97 @@ h1 {
     border-style: solid;
     text-align: center;
     margin-right: 6px;
+    margin-bottom: 10px;
     padding: 8px 20px;
     border-radius: 23px;
     border: 1px solid #6045D0;
     background: #D6D4CC;
     }
 
-.keyword-off:hover, .keyword-off:active {
-    background: #FFF;
-    box-shadow: 0px 0px 9px 0px rgba(96, 69, 208, 0.50);
-}
+    */
 
-.keyword-dropdown {
-    position: relative;
-    text-align: center;
+.keywords-group {
+    padding-left: 40px;
     font-family: "azo-sans-web", sans-serif;
     font-weight: 400;
-    color: #6045D0;
-    font-size: 14pt;
-    overflow: hidden;
+    font-style: normal;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
-.keyword-dropdown-txt {
-    position: absolute;
-    top: 42%;
-    bottom: 58%;
-    left: 40px;
+@media only screen and (max-width: 768px) {
+  .keywords-group {
+    font-size: 18px;
+  }
+}
+
+.keyword-off {
+  display: inline-block;
+  color: #6045D0;
+  list-style: none;
+  border-style: solid;
+  text-align: center;
+  margin-right: 6px;
+  margin-bottom: 10px;
+  padding: 8px 20px;
+  border-radius: 23px;
+  border: 1px solid #6045D0;
+  background: #D6D4CC;
+}
+
+.keyword-off:hover,
+.keyword-off.active {
+  display: inline-block;
+  color: #6045D0;
+  list-style: none;
+  border-style: solid;
+  text-align: center;
+  margin-right: 6px;
+  margin-bottom: 10px;
+  padding: 8px 20px;
+  border-radius: 23px;
+  border: 1px solid #6045D0;
+  background: #FFF;
+  box-shadow: 0px 0px 9px 0px rgba(96, 69, 208, 0.50);
+}
+
+.revealed-text-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: white;
+  margin-top: 8px;
+}
+
+.revealed-text {
+  padding: 20px 40px;
+  color: #332309;
+  font-size: 18px;
+  font-family: "azo-sans-web", sans-serif;
+  font-weight: 400;
 }
 
 p {
     color: #332309;
-    font-size: 14pt;
-    line-height: 22pt;
+    font-size: 18px;
+    line-height: 28px;
     font-family: "azo-sans-web", sans-serif;
     font-weight: 400;
     font-style: normal;
     padding-bottom: 70px;
     padding-top: 40px;    
     padding-left: 40px;
-    margin-right: 250px;
+    margin-right: 111px;
+    margin-top: 0;
+    margin-bottom: 0;
     }
 
-*, *::after, *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing:border-box;
-}
+
 
 .accordion {
     position: relative;
+    margin-right: 111px;
   }
 
 input {
@@ -169,36 +369,40 @@ input {
     top: 0;
     height: 100%;
     width: 100%;
+    margin: 0px;
     opacity:0;
     visibility: 0;
   }
 
 .accordion h2 {
     display: inline-block;
-    font-size: 40pt;
+    font-size: 40px;
     font-family: "azo-sans-web", sans-serif;
     font-weight: 400;
     color: #332309;
-    padding-bottom:20px;
     margin-left: 40px;
-    width: 734px;
-  }
-
-.accordion img::before {
-    display: inline-block;
-    align-items: center;
-    padding-bottom: 10px;
-    scale: 120%;
-  }
-
-.accordion img {
-    cursor: pointer;
+    width: 638px;
     position: relative;
+    z-index: 2;
+  }
+
+.accordion label::before {
+    content:"";
+    display: inline-block;
+    border: 14px solid transparent;
+    border-left:18px solid #6045D0;
+  }
+
+.accordion label {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: inline-block;
     align-items: center;
-    padding-bottom: 10px;
-    scale: 120%;
-  } 
+    z-index: 1;
+  }
+
 
 .txt {
     max-height:0px;
@@ -208,7 +412,6 @@ input {
     font-size: 18px;
     font-family: "azo-sans-web", sans-serif;
     transition: max-height 0.5s;
-    margin-right: 250px;
     margin-left: 40px;
   }
 
@@ -217,13 +420,17 @@ input {
     padding: 20px 26px;
 }
 
+input:checked ~ h2 label::before {
+  border-left:14px solid transparent;
+  border-top:18px solid #6045D0;
+}
+
 input:checked ~ h2 ~ .txt{
-    max-height:300px;
+    max-height:500px;
   }
 
 .accordion-bottom-bar {
     height: 2px;
     background: #6045D0;
     margin-left: 40px;
-    margin-right: 250px;
 }

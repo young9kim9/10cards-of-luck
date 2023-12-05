@@ -11,6 +11,45 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+        <script>
+          function toggleText(element, keyword) {
+      const revealedTextContainer = document.querySelector('.revealed-text-container');
+      const revealedText = document.querySelector('.revealed-text');
+    
+      const isActive = element.classList.contains('active');
+    
+      const keywordOffElements = document.querySelectorAll('.keyword-off');
+      keywordOffElements.forEach((el) => el.classList.remove('active'));
+    
+      if (!isActive) {
+        element.classList.add('active');
+    
+        switch (keyword) {
+          case '#1':
+            revealedText.innerHTML = 'Start a new adventure / Take a new path / Enter a new phase';
+            break;
+          case '#2':
+            revealedText.innerHTML = 'Live in the present / Perform unexpected things / Surprise someone';
+            break;
+          case '#3':
+            revealedText.innerHTML = 'Believe in what happens suddenly / Always open / Feeling protected and loved';
+            break;
+          case '#4':
+            revealedText.innerHTML = 'Embrace your own choices / Be honest with yourself / Pursuing ideal dreams';
+            break;
+          default:
+            revealedText.innerHTML = 'Default content';
+        }
+    
+        revealedTextContainer.style.maxHeight = `${revealedText.offsetHeight}px`;
+      } else {
+    
+        revealedTextContainer.style.maxHeight = '0';
+      }
+    }
+        </script>
+    
    </head>
 
    <body>
@@ -28,87 +67,57 @@
       </a>
       <h4>I.</h4>
       <h1>THE MAGICIAN</h1>
-      <div class="right-bar"></div>
+      <!--<div class="right-bar"></div>-->
       <div class="bottom-bar"></div>
 
 
       <div class="keywords-group">
-        <li class="keyword-off">#Expression</li>
-        <li class="keyword-off">#Strategy</li>
-        <li class="keyword-off">#Power</li>
-        <li class="keyword-off">#Inspirational action</li>
+        <li class="keyword-off" onclick="toggleText(this, '#1')">#Willpower</li>
+        <li class="keyword-off" onclick="toggleText(this, '#2')">#Desire</li>
+        <li class="keyword-off" onclick="toggleText(this, '#3')">#Concentration</li>
+        <li class="keyword-off" onclick="toggleText(this, '#4')">#Ability</li>
       </div>
 
 
-      <div class="keyword-dropdown">
-        <img src="img/keyword-dropdown-box.png" 
-        style="margin-top: 8px; width: 100%;">
-        <div class="keyword-dropdown-txt">
+      <div class="revealed-text-container">
+        <div class="revealed-text">
         Start a new adventure / Take a new path / Enter a new phase
         </div> 
       </div>
        
 
       <p>
-       The Magician reminds you that you have what you need to succeed beyond just a leap of faith, but you need to be proactive and draw your own strength.
-       It encourages you to use your intelligence, talent, and skills to make your dreams come true, rather than just waiting (or hoping) for them to come true.
-       You will be empowered by combining the physical, mental, and emotional resources presented in this card with the energy of the spiritual and intellectual realms. 
-       Therefore, it is a great opportunity to realize the ideas you are currently envisioning. 
-       The skills, knowledge, capabilities, and hard work you've built up will lead you where you want to be. 
-       So you can take action now.
-       <br><br>
-       However, you must have a clear vision to achieve your goals. 
-       You need a spiritual connection to your goals and intentions. 
-       Keep in mind that this is a great opportunity to achieve higher achievements to create the future you want.
-      </p>
+        The Magician is the representation of pure willpower. With the power of the elements and the suits, he takes the potential innate in the fool and molds it into being with the power of desire. He is the connecting force between heaven and earth, for he understands the meaning behind the words "as above so below" - that mind and world are only reflections of one another. Remember that you are powerful, create your inner world, and the outer will follow.
 
+        <br><br>
+
+        When you get the Magician in your reading, it might mean that it's time to tap into your full potential without hesitation. It might be in your new job, new business venture, a new love or something else. It shows that the time to take action is now and any signs of holding back would mean missing the opportunity of becoming the best version of yourself. Certain choices will have to be made and these can bring great changes to come. Harness some of the Magician's power to make the world that you desire most.
 
       <div class="accordion">
         <input type="checkbox" id="faq-1">
-        <h2>JOB<label for="faq-1" style="margin-left: 595px;"></label></h2>
+        <h2 style="margin-top: 0px; margin-bottom: 20px;">CAREER<label for="faq-1"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>
-            It's a good time to <span style="color: #E86247;">get a promotion or start a new business.</span>
-            You'll have a good chance to get better financially or make more money.
-            If you're ready, you can push it with a strong will and get the output you want.
-          </p>
+            There are likely to be opportunities in your midst, and you may be able to harness them if you take decisive action. The Magician is the card of manifestation, meaning should you have the desire and commitment to pursue whatever it is you want in your career, you’re likely to find success. Look behind any successful person, and you’ll likely find intense willpower and drive; this is the root of all ambition. The same goes if you’re looking to start a business; harness that drive, and keep it motivated to manifest your dream career. Sometimes, if this card represents another person, such as a colleague or business partner, you may want to approach with caution, as they may not be everything they appear to be.            </p>
         </div>
       </div>
       <div class="accordion">
         <input type="checkbox" id="faq-2">
-        <h2 style="margin-top: 20px;">LOVE<label for="faq-2" style="margin-left: 560px;"></label></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">LOVE<label for="faq-2"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>
-            People who are in a relationship can take a step forward by guaranteeing stronger commitment and happiness.
-            If you're single, it's a good time to meet new people.
-            And the partner by your side is serious and good progess for you.
-            This card represents <span style="color: #E86247;">the confidence to create and act on the opportunity to meet the persone you want, make the love you want, and meet the person you want.</span>
-          </p>
+            As with its general meaning, the Magician tarot meaning in love indicates making things manifest. Skill, creativity, desire and determination will bring success in love. Should you be searching for love, the Magician suggests you take action and create opportunities to meet someone who you desire. Because the Magician in tarot also represents resourcefulness and skill, it is also still important to make sure that no deception or illusions are at work. For both singles and couples, the Magician brings excitement and a desire to experiment.          </p>
         </div>
       </div>
       <div class="accordion">
         <input type="checkbox" id="faq-3">
-        <h2 style="margin-top: 20px;">MONEY<label for="faq-3" style="margin-left: 500px;"></label></h2>
-        <div class="accordion-bottom-bar"></div>
-        <div class="txt">
-          <p>
-            On the economic side, this card represetns <span style="color: #E86247;">a new opportunity to make money.</span>
-            As it's said on the job section, you can get a promotion or start a new business, which can lead you to make more money.
-          </p>
-        </div>
-      </div>
-      <div class="accordion">
-        <input type="checkbox" id="faq-4">
-        <h2 style="margin-top: 20px;">HEALTH<label for="faq-4" style="margin-left: 495px;"></label></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">FINANCES<label for="faq-3"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt" style="margin-bottom: 70px;">
           <p>
-            If you haven't been in good health, this card means <span style="color: #E86247;">strength and recovery.</span>
-            It also suggests that if you are mentally exhausted, you can meet a capable therapist who can heal you.
-            It can be seen that your health gets better and your vitality comes alive.
-          </p>
+            There can be increased financial opportunities available right now, you’ll likely just need to pursue them with gusto. The magician works with many tools to make his will manifest. Try and take a look at the tools you have available; they can be the key for you now. What skills do you have? What abilities are you not putting to use right now? Being creative can yield results.          </p>
         </div>
       </div>
 

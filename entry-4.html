@@ -10,7 +10,46 @@
         <link rel="stylesheet" href="https://use.typekit.net/nlm5qrt.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet"> 
+        
+        <script>
+          function toggleText(element, keyword) {
+      const revealedTextContainer = document.querySelector('.revealed-text-container');
+      const revealedText = document.querySelector('.revealed-text');
+    
+      const isActive = element.classList.contains('active');
+    
+      const keywordOffElements = document.querySelectorAll('.keyword-off');
+      keywordOffElements.forEach((el) => el.classList.remove('active'));
+    
+      if (!isActive) {
+        element.classList.add('active');
+    
+        switch (keyword) {
+          case '#1':
+            revealedText.innerHTML = 'Start a new adventure / Take a new path / Enter a new phase';
+            break;
+          case '#2':
+            revealedText.innerHTML = 'Live in the present / Perform unexpected things / Surprise someone';
+            break;
+          case '#3':
+            revealedText.innerHTML = 'Believe in what happens suddenly / Always open / Feeling protected and loved';
+            break;
+          case '#4':
+            revealedText.innerHTML = 'Embrace your own choices / Be honest with yourself / Pursuing ideal dreams';
+            break;
+          default:
+            revealedText.innerHTML = 'Default content';
+        }
+    
+        revealedTextContainer.style.maxHeight = `${revealedText.offsetHeight}px`;
+      } else {
+    
+        revealedTextContainer.style.maxHeight = '0';
+      }
+    }
+        </script>
+    
    </head>
 
    <body>
@@ -28,70 +67,63 @@
       </a>
       <h4>III.</h4>
       <h1>THE EMPRESS</h1>
-      <div class="right-bar"></div>
+      <!--<div class="right-bar"></div>-->
       <div class="bottom-bar"></div>
 
 
       <div class="keywords-group">
-        <li class="keyword-off">#Intuition</li>
-        <li class="keyword-off">#Unconscious</li>
-        <li class="keyword-off">#Inner voice</li>
-        <li class="keyword-off">#Sacred knowledge</li>
+        <li class="keyword-off" onclick="toggleText(this, '#1')">#Sensuality</li>
+        <li class="keyword-off" onclick="toggleText(this, '#2')">#Fertility</li>
+        <li class="keyword-off" onclick="toggleText(this, '#3')">#Creativity</li>
+        <li class="keyword-off" onclick="toggleText(this, '#4')">#Beauty</li>
+        <li class="keyword-off" onclick="toggleText(this, '#3')">#Abundance</li>
+        <li class="keyword-off" onclick="toggleText(this, '#4')">#Nature</li>
       </div>
 
 
-      <div class="keyword-dropdown">
-        <img src="img/keyword-dropdown-box.png" 
-        style="margin-top: 8px; width: 100%;">
-        <div class="keyword-dropdown-txt">
+      <div class="revealed-text-container">
+        <div class="revealed-text">
         Start a new adventure / Take a new path / Enter a new phase
         </div> 
       </div>
        
 
       <p>
-        While The Magician is the guardian of the conscious mind and the tangible world, The High Priestess is the guardian of the subconscious mind and the teacher of sacred knowledge and hidden mysteries. Sitting at the threshold of the conscious and subconscious mind, The High Priestess has an innate ability to travel between these realms effortlessly. She teaches you that the world is not always as it seems and more profound influences are often at play. She ushers you through the thin veil of awareness, offering you a deep, intuitive understanding of the Universe and a heightened awareness of secret or hidden information.
-        <br><br>
-        The High Priestess signifies spiritual enlightenment, inner illumination, divine knowledge and wisdom. Now is the time to be still so you can tune in to your intuition. The answers you are seeking will come from within, from your deepest truth and ‘knowing’. Allow The High Priestess to become your guide as you venture deep into your subconscious mind and access this inner wisdom. Connect with your intuition and your Higher Self through meditation, visualization, shamanic journeying, and being part of spiritual communities.
-      </p>
-
-
-      <div class="accordion">
+        The Empress shows us how deeply we are embedded to our femininity. Femininity could be associated with fertility, expression, creativity and nurturing among many other aspects. It therefore calls you to connect with beauty and bring happiness to your life. Understand yourself and get in touch with your sensuality so that you can attract life circumstances to bring happiness and joy. She is a signal that be kind to yourself, to take care of yourself.
+                <br><br>
+        The Empress is also a strong indication of pregnancy and motherhood. You can look for other cards to confirm if this is truly pregnancy, or rather just an indication of a motherly, nurturing and caring attitude. The Empress card could also mean the birth of a new idea, business or project on your life. Owing to the good fortune that surrounds this card, you can be sure that such situations and projects would end successfully in your life. Discover and bring forth those ideas that have been clinging to you and make sure that you devote yourself towards accomplishing them. This card is a sign that they are going to be successful, and well taken care of. The Empress, as the archetype of the mother earth, also encourages you to spend time interacting with nature, the mother of all of us.      
+        <div class="accordion">
         <input type="checkbox" id="faq-1">
-        <h2>JOB<label for="faq-1" style="margin-left: 595px;"></label></h2>
+        <h2 style="margin-top: 0px; margin-bottom: 20px;">CAREER<label for="faq-1"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
-          <p>It is a time when high-quality education, which is nutritious learning, sprouts. It’s a time when you have a strong intellectual desire, such as suddenly returning to school or studying to upgrade. 
-            On the one hand, <span style="color: #4E5EF6;"> you can take the opportunity to get the information that can be helpful or meet helpers.</span></p>
-        </div>
-      </div>
+          <p>
+            Your career right now may be enjoying a boost right now. You may be more creative and passionate than usual, and putting all your ideas to work in your projects. Since the Empress is related to nourishment and nurturing, it may also suggest that you’re feeling particularly nurturing and generous when it comes to your workplace as well. You may be working on making a more harmonious and welcoming office, whether that means being supportive of coworkers, or putting a new coat of paint at your home office. Having the environment to do your best can certainly give you even more momentum. Sometimes, this card can also point to another person in your workplace that has these qualities.       
+          </p>
+          </div>
+          </div>
       <div class="accordion">
         <input type="checkbox" id="faq-2">
-        <h2 style="margin-top: 20px;">LOVE<label for="faq-2" style="margin-left: 560px;"></label></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">LOVE<label for="faq-2"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
-          <p>It is a time when high-quality education, which is nutritious learning, sprouts. It’s a time when you have a strong intellectual desire, such as suddenly returning to school or studying to upgrade. 
-            On the one hand, <span style="color: #4E5EF6;"> you can take the opportunity to get the information that can be helpful or meet helpers.</span></p>
-        </div>
-      </div>
+          <p>
+            The Empress tarot love meaning stems from the element of earth. The person represented by this card can be loving, nurturing and caring, as has financial security or appreciative of beautiful, comforting things. Sometimes, the Empress can point to love and work coming together, either with a coworker, or perhaps a new business venture.
+
+            When it comes to relationships, this card also heralds a stable, serious and committed relationship. Because the card also represents motherhood, sometimes it can also signal marriage or pregnancy, or at least a new family, in whatever form that means for you.      
+          </p>
+          </div>
+          </div>
       <div class="accordion">
         <input type="checkbox" id="faq-3">
-        <h2 style="margin-top: 20px;">MONEY<label for="faq-3" style="margin-left: 500px;"></label></h2>
-        <div class="accordion-bottom-bar"></div>
-        <div class="txt">
-          <p>It is a time when high-quality education, which is nutritious learning, sprouts. It’s a time when you have a strong intellectual desire, such as suddenly returning to school or studying to upgrade. 
-            On the one hand, <span style="color: #4E5EF6;"> you can take the opportunity to get the information that can be helpful or meet helpers.</span></p>
-        </div>
-      </div>
-      <div class="accordion">
-        <input type="checkbox" id="faq-4">
-        <h2 style="margin-top: 20px;">HEALTH<label for="faq-4" style="margin-left: 495px;"></label></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">FINANCES<label for="faq-3"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt" style="margin-bottom: 70px;">
-          <p>It is a time when high-quality education, which is nutritious learning, sprouts. It’s a time when you have a strong intellectual desire, such as suddenly returning to school or studying to upgrade. 
-            On the one hand, <span style="color: #4E5EF6;"> you can take the opportunity to get the information that can be helpful or meet helpers.</span></p>
-        </div>
-      </div>
+          <p>
+            The Empress is abundant both creatively and materially, so this card can point to a comfortable financial situation. You may also be feeling very generous with your money now, wanting to nourish your friends and family with your abundance and good luck. It is certainly a good time to share what you have.
+          </p>
+          </div>
+          </div>
 
     </section>
    </main>

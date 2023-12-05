@@ -10,6 +10,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/nlm5qrt.css">
+
+    <script>
+      function toggleText(element, keyword) {
+  const revealedTextContainer = document.querySelector('.revealed-text-container');
+  const revealedText = document.querySelector('.revealed-text');
+
+  const isActive = element.classList.contains('active');
+
+  const keywordOffElements = document.querySelectorAll('.keyword-off');
+  keywordOffElements.forEach((el) => el.classList.remove('active'));
+
+  if (!isActive) {
+    element.classList.add('active');
+
+    switch (keyword) {
+      case '#1':
+        revealedText.innerHTML = 'Start a new adventure / Take a new path / Enter a new phase';
+        break;
+      case '#2':
+        revealedText.innerHTML = 'Live in the present / Perform unexpected things / Surprise someone';
+        break;
+      case '#3':
+        revealedText.innerHTML = 'Believe in what happens suddenly / Always open / Feeling protected and loved';
+        break;
+      case '#4':
+        revealedText.innerHTML = 'Embrace your own choices / Be honest with yourself / Pursuing ideal dreams';
+        break;
+      default:
+        revealedText.innerHTML = 'Default content';
+    }
+
+    revealedTextContainer.style.maxHeight = `${revealedText.offsetHeight}px`;
+  } else {
+
+    revealedTextContainer.style.maxHeight = '0';
+  }
+}
+    </script>
+
    </head>
 
    <body>
@@ -27,78 +66,64 @@
       </a>
       <h4>V.</h4>
       <h1>THE HIEROPHANT</h1>
-      <div class="right-bar"></div>
+      <!--<div class="right-bar"></div>-->
       <div class="bottom-bar"></div>
 
 
       <div class="keywords-group">
-        <li class="keyword-off">#Education</li>
-        <li class="keyword-off">#Beliefs</li>
-        <li class="keyword-off">#Conformity</li>
-        <li class="keyword-off">#Social groups</li>
+        <li class="keyword-off" onclick="toggleText(this, '#1')">#Tradition</li>
+        <li class="keyword-off" onclick="toggleText(this, '#2')">#Social groups</li>
+        <li class="keyword-off" onclick="toggleText(this, '#3')">#Conformity</li>
+        <li class="keyword-off" onclick="toggleText(this, '#4')">#Knowledge</li>
       </div>
 
 
-      <div class="keyword-dropdown">
-        <img src="img/keyword-dropdown-box.png" 
-        style="margin-top: 8px; width: 100%;">
-        <div class="keyword-dropdown-txt">
-        Acquiring knowledge / Improved understanding / Learning and research / Find a deeper meaning
+      <div class="revealed-text-container">
+        <div class="revealed-text">
+        Start a new adventure / Take a new path / Enter a new phase
         </div> 
       </div>
        
 
       <p>
-        To see the Hierophant in a reading is to embrace the conventional, for it suggests that you have a certain desire to actually follow a process which has been well established. 
-        It also suggests that you want to stay within certain conventional bounds of what could be considered an orthodox approach. 
-        So, instead of being innovative, you will be adapting to certain beliefs and systems which are already put in place and are existing.
+        To see the Hierophant in a reading is to embrace the conventional, for it suggests that you have a certain desire to actually follow a process which has been well established. It also suggests that you want to stay within certain conventional bounds of what could be considered an orthodox approach. So, instead of being innovative, you will be adapting to certain beliefs and systems which are already put in place and are existing. 
         <br><br>
-        This card suggests that it’s better for you to follow social structures which are established and have their own traditions. 
-        You might be involved in certain ceremonies, rituals or other religious trappings, for instance. 
-        When it comes to tarot readings, this particular card is most commonly representative of institutions as well as their core values. 
-        This is a sign that shows that you need to conform to the already existing set of rules and situations which are fixed already.
+        The Hierophant card suggests that it’s better for you to follow social structures which are established and have their own traditions. You might be involved in certain ceremonies, rituals or other religious trappings, for instance. When it comes to tarot readings, this particular card is most commonly representative of institutions as well as their core values. This is a sign that shows that you need to conform to the already existing set of rules and situations which are fixed already.
       </p>
 
-      <div class="accordion">
+
+        <div class="accordion">
         <input type="checkbox" id="faq-1">
-        <h2>CAREER<label for="faq-1" style="margin-left: 494px;"></label></h2>
+        <h2 style="margin-top: 0px; margin-bottom: 20px;">CAREER<label for="faq-1"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>
-            You’ll find success from working with others right now. 
-            This can sometimes mean also choosing to not rock the boat, and staying on the tried and true path. 
-            With so many variables when it comes to work, <span style="color: #E066BD;">it may be better to stay safe for now.</span>
-            This card can also signal that group cohesion rather than individuality can be more important at the moment. 
-            Sometimes, the Hierophant can also signify a more senior mentor that can be a helpful aid in you progressing through your career. 
-            In addition, meaning a time of learning, whether through a school or vocational training, can be helpful for you.
-
-        </p>
-        </div>
-      </div>
+            With the Hierophant, you’ll find success from working with others right now. This can sometimes mean also choosing to not rock the boat, and staying on the tried and true path. With so many variables when it comes to work, it may be better to stay safe for now. This card can also signal that group cohesion rather than individuality can be more important at the moment. Sometimes, the Hierophant can also signify a more senior mentor that can be a helpful aid in you progressing through your career. The card is also representative of education, meaning that a time of learning, whether through a school or vocational training, can be helpful for you.
+           </p>
+          </div>
+          </div>
       <div class="accordion">
         <input type="checkbox" id="faq-2">
-        <h2 style="margin-top: 20px;">LOVE<label for="faq-2" style="margin-left: 560px;"></label></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">LOVE<label for="faq-2"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>
-            The Hierophant's love meaning can point to <span style="color: #E066BD;">the effects of conventional religion on love and choosing partners.</span>
-            You could be drawn to partners that are safe, traditional, and respected by your community, and avoid partners that are considered "taboo". 
-            It can also represent the more spiritual aspects of love, and a reminder that our partners should be treated morally, and lovingly. 
-            Sometimes, this card can also indicate marriage.
+            When it comes to relationship tarot readings, the Hierophant's upright love meaning can point to the effects of conventional religion on love and choosing partners. You could be drawn to partners that are safe, traditional, and respected by your community, and avoid partners that are considered "taboo". The Hierophant love meaning in tarot can also represent the more spiritual aspects of love, and a reminder that our partners should be treated morally, and lovingly. Sometimes, this card can also indicate marriage.
+
+            Relationships affected by the Hierophant card are usually traditional, conventional and socially approved. Partners are likely to share a system of beliefs.
           </p>
-        </div>
-      </div>
+          </div>
+          </div>
       <div class="accordion">
         <input type="checkbox" id="faq-3">
-        <h2 style="margin-top: 20px;">FINANCES<label for="faq-3" style="margin-left: 437px;"></label></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">FINANCES<label for="faq-3"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt" style="margin-bottom: 70px;">
           <p>
-            The Hierophant can suggest that your money should remain safe in traditional, established institutions. 
-            Novel ways of making money, whether it’s a side hustle you don’t really understand, or new financial products, may cause problems for you; <span style="color: #E066BD;">avoid gambling with your money.</span>
+            When it comes to your finances, the Hierophant can suggest that your money should remain safe in traditional, established institutions. Novel ways of making money, whether it’s a side hustle you don’t really understand, or new financial products, may cause problems for you; avoid gambling with your money.
           </p>
-        </div>
-      </div>
+          </div>
+          </div>
 
     </section>
    </main>

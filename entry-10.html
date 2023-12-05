@@ -13,6 +13,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
+
+    <script>
+      function toggleText(element, keyword) {
+    const revealedTextContainer = document.querySelector('.revealed-text-container');
+    const revealedText = document.querySelector('.revealed-text');
+    
+    const isActive = element.classList.contains('active');
+    
+    const keywordOffElements = document.querySelectorAll('.keyword-off');
+    keywordOffElements.forEach((el) => el.classList.remove('active'));
+    
+    if (!isActive) {
+    element.classList.add('active');
+    
+    switch (keyword) {
+      case '#1':
+        revealedText.innerHTML = 'Start a new adventure / Take a new path / Enter a new phase';
+        break;
+      case '#2':
+        revealedText.innerHTML = 'Live in the present / Perform unexpected things / Surprise someone';
+        break;
+      case '#3':
+        revealedText.innerHTML = 'Believe in what happens suddenly / Always open / Feeling protected and loved';
+        break;
+      case '#4':
+        revealedText.innerHTML = 'Embrace your own choices / Be honest with yourself / Pursuing ideal dreams';
+        break;
+      default:
+        revealedText.innerHTML = 'Default content';
+    }
+    
+    revealedTextContainer.style.maxHeight = `${revealedText.offsetHeight}px`;
+    } else {
+    
+    revealedTextContainer.style.maxHeight = '0';
+    }
+    }
+    </script>
+    
    </head>
 
    <body>
@@ -30,61 +69,65 @@
       </a>
       <h4>IX.</h4>
       <h1>THE HERMIT</h1>
-      <div class="right-bar"></div>
+      <!--<div class="right-bar"></div>-->
       <div class="bottom-bar"></div>
 
 
       <div class="keywords-group">
-        <li class="keyword-off">#Self-reflection</li>
-        <li class="keyword-off">#Introspection</li>
-        <li class="keyword-off">#Withdrawal</li>
-        <li class="keyword-off">#Solitude</li>
+        <li class="keyword-off" onclick="toggleText(this, '#1')">#Self-reflection</li>
+        <li class="keyword-off" onclick="toggleText(this, '#2')">#Introspection</li>
+        <li class="keyword-off" onclick="toggleText(this, '#3')">#Contemplation</li>
+        <li class="keyword-off" onclick="toggleText(this, '#4')">#Solitude</li>
       </div>
 
 
-      <div class="keyword-dropdown">
-        <img src="img/keyword-dropdown-box.png" 
-        style="margin-top: 8px; width: 100%;">
-        <div class="keyword-dropdown-txt">
-            Think carefully about something / Focus on the inside / Act calmly / Find the answer from inside
+      <div class="revealed-text-container">
+        <div class="revealed-text">
+        Start a new adventure / Take a new path / Enter a new phase
         </div> 
       </div>
        
 
       <p>
         The Hermit is a seeker for the knowledge that comes from within. A lonely wanderer in the path of the night, he searches for that which can only be gained with long periods of solitude - the inner voice. To hear it, he must disconnect from the crowds whose voices and desires threaten to overcome his own. He walks through the dark night of his unconscious, guided only by the low light of the northern star, with his destination being his home, his self.
-        <br><br>
+                <br><br>
 
-You are currently contemplating that you need to be alone. Never be afraid to take this chance to reflect, as it could help you clear your mind of all the clutter that comes with everyday life. The Hermit may also refer to your effort in taking action that is authentic and aligned with your true self. You are perhaps searching your inner soul for guidance on what is right, and where your next steps are to be.
 
-The hermit's appearance in a reading can also denote the appearance of someone who will come to your life that will be your mentor.
+        You are currently contemplating that you need to be alone. Never be afraid to take this chance to reflect, as it could help you clear your mind of all the clutter that comes with everyday life. The Hermit may also refer to your effort in taking action that is authentic and aligned with your true self. You are perhaps searching your inner soul for guidance on what is right, and where your next steps are to be.
+        The hermit's appearance in a reading can also denote the appearance of someone who will come to your life that will be your mentor.
       </p>
 
-      <div class="accordion">
+
+        <div class="accordion">
         <input type="checkbox" id="faq-1">
-        <h2>CAREER<label for="faq-1" style="margin-left: 494px;"></label></h2>
+        <h2 style="margin-top: 0px; margin-bottom: 20px;">CAREER<label for="faq-1"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>
-            You may be spending some much needed time thinking about what you want out of your career right now. You may feel as though the path you are treading at the moment is not really working for you, and there can be the sense of not being fulfilled. Right now, you are trying to understand what kind of work would give you joy on all levels. If you’ve been pursuing a career purely for money, or financial stability, these qualifications are no longer enough for you. You may be looking for a purpose, or at least something that gets you closer to who you want to be.          </p>
-        </div>
-      </div>
+            You may be spending some much needed time thinking about what you want out of your career right now. You may feel as though the path you are treading at the moment is not really working for you, and there can be the sense of not being fulfilled. Right now, you are trying to understand what kind of work would give you joy on all levels. If you’ve been pursuing a career purely for money, or financial stability, these qualifications are no longer enough for you. You may be looking for a purpose, or at least something that gets you closer to who you want to be.  
+          </p>
+          </div>
+          </div>
       <div class="accordion">
-        <input type="checkbox" id="faq-1">
-        <h2 style="margin-top: 20px;">LOVE<label for="faq-1" style="margin-left: 560px;"></label></h2>
+        <input type="checkbox" id="faq-2">
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">LOVE<label for="faq-2"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>
-            Love, being one of life’s greatest mysteries, can be a great teacher. It requires all of us to truly know ourselves, our needs, our fears and our insecurities. The Hermit tarot love meaning can signal that we may need some time alone in order to develop some insight about our selves before forming a strong romantic relationship with another person. This period may feel a bit lonely, but it will place you on the right path to finding a love that you are meant to have. If you’re already in a relationship, this soul-searching is something that the two of you may want to do together. Both of you may want to think about what you expect out of a relationship, and what may make you happier. The initial talks may be uncomfortable, but will prepare a strong foundation for tackling the future ahead.        </div>
-      </div>
+            Love, being one of life’s greatest mysteries, can be a great teacher. It requires all of us to truly know ourselves, our needs, our fears and our insecurities. The Hermit tarot love meaning can signal that we may need some time alone in order to develop some insight about our selves before forming a strong romantic relationship with another person. This period may feel a bit lonely, but it will place you on the right path to finding a love that you are meant to have. If you’re already in a relationship, this soul-searching is something that the two of you may want to do together. Both of you may want to think about what you expect out of a relationship, and what may make you happier. The initial talks may be uncomfortable, but will prepare a strong foundation for tackling the future ahead.
+          </p>
+          </div>
+          </div>
       <div class="accordion">
         <input type="checkbox" id="faq-3">
-        <h2 style="margin-top: 20px;">FINANCES<label for="faq-3" style="margin-left: 437px;"></label></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">FINANCES<label for="faq-3"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt" style="margin-bottom: 70px;">
           <p>
-            You may be coming to the realization that money doesn’t bring you happiness right now. This may be a time with less focus on material things, and more focus on trying to understand where you can truly find fulfillment.        </div>
-      </div>
+            You may be coming to the realization that money doesn’t bring you happiness right now. This may be a time with less focus on material things, and more focus on trying to understand where you can truly find fulfillment.
+                    </p>
+          </div>
+          </div>
 
     </section>
    </main>

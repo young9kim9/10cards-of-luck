@@ -26,7 +26,6 @@ body {
     height: 90px;
     position: relative;
     padding-top: 30px;
-    padding-bottom: 40px;
     scale: 90%;
   }
 
@@ -36,30 +35,38 @@ body {
     font-size: 34pt;
     color: #fff;
     margin: 0;
-    left: 43%;
+    left: 40%;
 }
 
 /* cards */
-.card1 {
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1920px; /* Adjust the maximum width as needed */
+
+}
+
+.card {
   background: white;
   background-size: cover;
   height: 480px;
   width: 305px;
   border-radius: 10px;
-  position: absolute;
+  position: relative;
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
-  left: 50%;
-  top: 50%;
+  margin: 20px;
   transform-origin: center 120%;
-  transition: transform 0.5s ease-out;
-  transform: translate(-50%, -50%) rotate(0deg);
+  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
-.card1:hover{
-    transform: translate(-50%, -50%) scale(1.05);
+.card:hover{
+    transform: scale(1.05);
     box-shadow: 0 0 32px rgba(255, 229, 160, 0.6);
   }
 
+/*
 .card2 {
     background: white;
     background-size: cover;
@@ -239,3 +246,4 @@ body {
     transform: translate(-50%, -50%) scale(1.05);
     box-shadow: 0 0 32px rgba(255, 229, 160, 0.6);
   }
+  */

@@ -10,6 +10,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/nlm5qrt.css">
+
+    <script>
+      function toggleText(element, keyword) {
+  const revealedTextContainer = document.querySelector('.revealed-text-container');
+  const revealedText = document.querySelector('.revealed-text');
+
+  const isActive = element.classList.contains('active');
+
+  const keywordOffElements = document.querySelectorAll('.keyword-off');
+  keywordOffElements.forEach((el) => el.classList.remove('active'));
+
+  if (!isActive) {
+    element.classList.add('active');
+
+    switch (keyword) {
+      case '#1':
+        revealedText.innerHTML = 'Start a new adventure / Take a new path / Enter a new phase';
+        break;
+      case '#2':
+        revealedText.innerHTML = 'Live in the present / Perform unexpected things / Surprise someone';
+        break;
+      case '#3':
+        revealedText.innerHTML = 'Believe in what happens suddenly / Always open / Feeling protected and loved';
+        break;
+      case '#4':
+        revealedText.innerHTML = 'Embrace your own choices / Be honest with yourself / Pursuing ideal dreams';
+        break;
+      default:
+        revealedText.innerHTML = 'Default content';
+    }
+
+    revealedTextContainer.style.maxHeight = `${revealedText.offsetHeight}px`;
+  } else {
+
+    revealedTextContainer.style.maxHeight = '0';
+  }
+}
+    </script>
+
    </head>
 
    <body>
@@ -27,24 +66,22 @@
       </a>
       <h4>IV.</h4>
       <h1>THE EMPEROR</h1>
-      <div class="right-bar"></div>
+      <!--<div class="right-bar"></div>-->
       <div class="bottom-bar"></div>
 
 
       <div class="keywords-group">
-        <li class="keyword-off">#Paternity</li>
-        <li class="keyword-off">#Structure</li>
-        <li class="keyword-off">#Protection</li>
-        <li class="keyword-off">#Authority</li>
-        <li class="keyword-off">#Control</li>
+        <li class="keyword-off" onclick="toggleText(this, '#1')">#Stability</li>
+        <li class="keyword-off" onclick="toggleText(this, '#2')">#Structure</li>
+        <li class="keyword-off" onclick="toggleText(this, '#3')">#CProtection</li>
+        <li class="keyword-off" onclick="toggleText(this, '#4')">#Practicality</li>
+        <li class="keyword-off" onclick="toggleText(this, '#3')">#Focus</li>
       </div>
 
 
-      <div class="keyword-dropdown">
-        <img src="img/keyword-dropdown-box.png" 
-        style="margin-top: 8px; width: 100%;">
-        <div class="keyword-dropdown-txt">
-        Protection and defense / Gives a sense of security and satisfaction
+      <div class="revealed-text-container">
+        <div class="revealed-text">
+        Start a new adventure / Take a new path / Enter a new phase
         </div> 
       </div>
        
@@ -52,48 +89,43 @@
       <p>
         It’s all about control when it comes to the Emperor, for this card means authority, regulation, organization and a fatherliness. The Emperor represents a strategic thinker who sets out plans that he must see through. He is a symbol of the masculine principle - the paternal figure in life that gives structure, creates rules and systems, and imparts knowledge. Where the Empress's desire for their kingdom is to create happiness, the emperor desires to foster honor and discipline. He guides with a firm hand, following the calling of the crown above all else. Though he is a ruler, he understands that to reign is also to serve - thus he acts rationally and according to what is for the greater good of the kingdom.
         <br><br>
-        To see him in a reading presents a chance to grow in terms of the goals that you have set for yourself. It presents a successful future as long as you pursue your goals similar to the fashion that the Emperor does, methodically, and strategically.
-        When you see him in a reading, a possible interpretation is that you could be put in charge of something important. It could be a position at work or in any kind of organization or institution that desperately needs order and a clear decisive mind. You may be called to act in the place of the Emperor, using his wisdom to bring clarity to the project.
-      </p>
 
-      <div class="accordion">
+        To see him in a reading presents a chance to grow in terms of the goals that you have set for yourself. It presents a successful future as long as you pursue your goals similar to the fashion that the Emperor does, methodically, and strategically.
+
+        When you see him in a reading, a possible interpretation is that you could be put in charge of something important. It could be a position at work or in any kind of organization or institution that desperately needs order and a clear decisive mind. You may be called to act in the place of the Emperor, using his wisdom to bring clarity to the project.
+        </p>
+        <div class="accordion">
         <input type="checkbox" id="faq-1">
-        <h2>CAREER<label for="faq-1" style="margin-left: 494px;"></label></h2>
+        <h2 style="margin-top: 0px; margin-bottom: 20px;">CAREER<label for="faq-1"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>
-            Your career may be flourishing due to your hard work, concentration and organized approach. 
-            The Emperor calls on you to be <span style="color: #44A851;">disciplined, efficient and persistent when it comes to getting what you want out of your job, or job search.</span>
-            If your office, or your work process is a bit chaotic or frustrating right now, it may be helpful for you to step up and introduce new methodologies or structures that can help you and your teammates collaborate more efficiently. 
-            This card can also point to having a more senior colleague or boss that can provide you with support and advice in your career. 
-          </p>
-        </div>
-      </div>
+            Your career may be flourishing due to your hard work, concentration and organized approach. The Emperor calls on you to be disciplined, efficient and persistent when it comes to getting what you want out of your job, or job search. If your office, or your work process is a bit chaotic or frustrating right now, it may be helpful for you to step up and introduce new methodologies or structures that can help you and your teammates collaborate more efficiently. This card can also point to having a more senior colleague or boss that can provide you with support and advice in your career. 
+           </p>
+          </div>
+          </div>
       <div class="accordion">
         <input type="checkbox" id="faq-2">
-        <h2 style="margin-top: 20px;">LOVE<label for="faq-2" style="margin-left: 560px;"></label></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">LOVE<label for="faq-2"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>
-            The Emperor tarot love meaning asks us to <span style="color: #44A851;">bring common sense, structure, discipline and logic to relationships and romance.</span>
-            Relationships may be rather traditional, and perhaps stifling if not handled too carefully.
-            As a person, the Emperor represents someone older and well-established, that may also have a hard time expressing their feelings. 
-            Sometimes, this card however, can also symbolize a person driven by ego, who is domineering and bullying, and unable to empathize with others.
-          </p>
-        </div>
-      </div>
+            Although the Emperor is a very serious man, without any real sense of romance, its appearance in a love tarot reading can still be beneficial. The Emperor tarot love meaning asks us to bring common sense, structure, discipline and logic to relationships and romance. Relationships around this tarot card may be rather traditional, and perhaps stifling if not handled too carefully.
+
+            As a person, the Emperor represents someone older and well-established, that may also have a hard time expressing their feelings. Sometimes, this card however, can also symbolize a person driven by ego, who is domineering and bullying, and unable to empathize with others.
+                    </p>
+          </div>
+          </div>
       <div class="accordion">
         <input type="checkbox" id="faq-3">
-        <h2 style="margin-top: 20px;">FINANCES<label for="faq-3" style="margin-left: 437px;"></label></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">FINANCES<label for="faq-3"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt" style="margin-bottom: 70px;">
           <p>
-            When it comes to your finances, the Emperor signals <span style="color: #44A851;">the need to be controlled, disciplined and responsible with your money.</span>
-            Make sure that you have a clear understanding of where your money is going; put together a budget, make sure you stick to it, and check in every month or so. 
-            So long as you can keep it up, you’ll likely be in a good financial position.
-          </p>
-        </div>
-      </div>
+            When it comes to your finances, the Emperor signals the need to be controlled, disciplined and responsible with your money. Make sure that you have a clear understanding of where your money is going; put together a budget, make sure you stick to it, and check in every month or so. So long as you can keep it up, you’ll likely be in a good financial position.
+                    </p>
+          </div>
+          </div>
 
     </section>
    </main>

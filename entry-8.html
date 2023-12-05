@@ -10,6 +10,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/nlm5qrt.css">
+
+    <script>
+      function toggleText(element, keyword) {
+  const revealedTextContainer = document.querySelector('.revealed-text-container');
+  const revealedText = document.querySelector('.revealed-text');
+
+  const isActive = element.classList.contains('active');
+
+  const keywordOffElements = document.querySelectorAll('.keyword-off');
+  keywordOffElements.forEach((el) => el.classList.remove('active'));
+
+  if (!isActive) {
+    element.classList.add('active');
+
+    switch (keyword) {
+      case '#1':
+        revealedText.innerHTML = 'Start a new adventure / Take a new path / Enter a new phase';
+        break;
+      case '#2':
+        revealedText.innerHTML = 'Live in the present / Perform unexpected things / Surprise someone';
+        break;
+      case '#3':
+        revealedText.innerHTML = 'Believe in what happens suddenly / Always open / Feeling protected and loved';
+        break;
+      case '#4':
+        revealedText.innerHTML = 'Embrace your own choices / Be honest with yourself / Pursuing ideal dreams';
+        break;
+      default:
+        revealedText.innerHTML = 'Default content';
+    }
+
+    revealedTextContainer.style.maxHeight = `${revealedText.offsetHeight}px`;
+  } else {
+
+    revealedTextContainer.style.maxHeight = '0';
+  }
+}
+    </script>
+
    </head>
 
    <body>
@@ -27,57 +66,66 @@
       </a>
       <h4>VII.</h4>
       <h1>THE CHARIOT</h1>
-      <div class="right-bar"></div>
+      <!--<div class="right-bar"></div>-->
       <div class="bottom-bar"></div>
 
 
       <div class="keywords-group">
-        <li class="keyword-off">#Relationships</li>
-        <li class="keyword-off">#Choices</li>
-        <li class="keyword-off">#Romance</li>
-        <li class="keyword-off">#Unions</li>
+        <li class="keyword-off" onclick="toggleText(this, '#1')">#Success</li>
+        <li class="keyword-off" onclick="toggleText(this, '#2')">#Ambition</li>
+        <li class="keyword-off" onclick="toggleText(this, '#3')">#Determination</li>
+        <li class="keyword-off" onclick="toggleText(this, '#4')">#Control</li>
       </div>
 
 
-      <div class="keyword-dropdown">
-        <img src="img/keyword-dropdown-box.png" 
-        style="margin-top: 8px; width: 100%;">
-        <div class="keyword-dropdown-txt">
-        Set up a relationship / Feel a love / Become a lover of get married / Empathy with others / Get along intimately
+      <div class="revealed-text-container">
+        <div class="revealed-text">
+        Start a new adventure / Take a new path / Enter a new phase
         </div> 
       </div>
        
 
       <p>
-        The primary meaning within the Lovers is harmony, attractiveness, and perfection in a relationship. 
-        The trust and the unity that the lovers have gives each of them confidence and strength, empowering the other. 
-        The bond that they have created is very strong, and it can indicate that the two are joined in marriage, and other close and intimate relationships.
+        The Chariot tarot card is all about overcoming challenges and gaining victory through maintaining control of your surroundings. This perfect control and confidence allows the charioteer to emerge victorious in any situation. The use of strength and willpower are critical in ensuring that you overcome the obstacles that lie in your path. The Chariot's message comes to make you stronger as you strive to achieve your goals.
+
+        The key message that he brings to you is that you must maintain focus, confidence, and determination through a process that will be full of winding turns and detours. If you have a plan or a project that you seem not to be sure about, the Chariot shows that you should pursue the plan with a structured and ordered approach. Your boldness will ensure that you achieve all that you should in this goal.
         <br><br>
+        In the Chariot's quest for his goal, he may display some behavior that he has never seen within himself before - competition and a desire to succeed has perhaps brought out a more aggressive part of his personality. Aggression is a natural part of human nature, and the Chariot reminds you that it can also be used to help you take charge of your situation, but also must be reined in so that it does not hinder your way forward. 
+      </p>
 
-        Another meaning behind the lovers card is the concept of choice - a choice between things that are opposing and mutually exclusive. This could be a dilemma that you need to think about carefully and make the best decision for your situation.
 
-        A more personal Lovers meaning that can apply to individuals is the development of your own personal belief systems, regardless of what are the societal norms. We see this as a development from the Hierophant, who made decrees and passed on his knowledge through a standardized system. This is one of the times when you figure out what you are going to stand for, and what your philosophy in life will truly be. You must start making up your mind about what you find important and unimportant in your life. You should be as true to yourself as you can be, so you will be genuine and authentic to the people who are around you.      </p>
-
-      <div class="accordion">
+        <div class="accordion">
         <input type="checkbox" id="faq-1">
-        <h2>CAREER<label for="faq-1" style="margin-left: 494px;"></label></h2>
+        <h2 style="margin-top: 0px; margin-bottom: 20px;">CAREER<label for="faq-1"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>
-            Sometimes, the Lovers can signal a business partnership, or a relationship with a colleague that is harmonious and beneficial to both parties. 
-            The Lovers card, contrary to popular belief, can also symbolize partnerships of a platonic kind, though at times, this can also signal a romantic relationship that can blossom. If this does happen, make sure you understand the kinds of risk that you open yourself up to, and make a decision both with your head as well as your heart. The Lovers tarot card can also suggest that there are big decisions that you need to make when it comes to your future career. You may be at a crossroads, or shifting from one path to another, or you may need to make choices between your work and other aspects of your life.
-        </p>
-        </div>
-      </div>
+            Your ambition will take you far, when you have the Chariot in a career tarot reading. With a clear understanding of what you want for your career, you know your destination, and you can be very focused on getting there. You’re likely to feel very motivated at work, giving you the discipline, drive and self-control you need to succeed. If you’re looking to change roles, or get a more senior position at your current workplace, this card signals that all you need to do is go for it. When it comes to your work environment, remain clear of distractions; this can include office politics or rivals; make sure you remain focused on what you need to do. 
+           </p>
+          </div>
+          </div>
+      <div class="accordion">
+        <input type="checkbox" id="faq-2">
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">LOVE<label for="faq-2"></label></h2>
+        <div class="accordion-bottom-bar"></div>
+        <div class="txt">
+          <p>
+            Now is the time to take the wheel, and make sure you have a clear understanding of what you’re looking for in love and romance. Once you know your destination, the Chariot tarot love meaning urges you to take action. When you take control of your love life, you are very likely to see rewards. Confidence, courage and drive will lead to success.
+
+            As you move towards your goals, the Chariot tarot love meaning however can also indicate the need to balance two urges, represented by the two horses in the card. They may pull you in different directions, but steering a clear path ahead means reining each one in so that you stay on the right path. This card can sometimes bring questions of whether the choices that you have made so far are balanced; is your relationship suffering because of long hours at work? Are you so focused on your relationship that you’ve sacrificed too much of your individuality for it? The Chariot asks us to take our lives back into our own hands again, and steer with determination.
+                              </p>
+          </div>
+          </div>
       <div class="accordion">
         <input type="checkbox" id="faq-3">
-        <h2 style="margin-top: 20px;">FINANCES<label for="faq-3" style="margin-left: 437px;"></label></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">FINANCES<label for="faq-3"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt" style="margin-bottom: 70px;">
           <p>
-            When it comes to finances, the Lovers card can suggest that big financial decisions need to be made. You may have to choose between having one big expense versus another; the important thing to remember is that it seems like you can’t have both. One path closes the door to another path, and your choices may have larger impacts in the future.          </p>
-        </div>
-      </div>
+            If there have been any financial obstacles that have stood in the way of your material stability, now can be the time to deal with them. The Chariot gives you motivation, focus and determination to conquer those challenges. With enough self-discipline, you’ll be able to feel comfortable with your financial situation.
+                              </p>
+          </div>
+          </div>
 
     </section>
    </main>

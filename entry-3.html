@@ -12,6 +12,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/nlm5qrt.css">
+
+    <script>
+      function toggleText(element, keyword) {
+  const revealedTextContainer = document.querySelector('.revealed-text-container');
+  const revealedText = document.querySelector('.revealed-text');
+
+  const isActive = element.classList.contains('active');
+
+  const keywordOffElements = document.querySelectorAll('.keyword-off');
+  keywordOffElements.forEach((el) => el.classList.remove('active'));
+
+  if (!isActive) {
+    element.classList.add('active');
+
+    switch (keyword) {
+      case '#1':
+        revealedText.innerHTML = 'Start a new adventure / Take a new path / Enter a new phase';
+        break;
+      case '#2':
+        revealedText.innerHTML = 'Live in the present / Perform unexpected things / Surprise someone';
+        break;
+      case '#3':
+        revealedText.innerHTML = 'Believe in what happens suddenly / Always open / Feeling protected and loved';
+        break;
+      case '#4':
+        revealedText.innerHTML = 'Embrace your own choices / Be honest with yourself / Pursuing ideal dreams';
+        break;
+      default:
+        revealedText.innerHTML = 'Default content';
+    }
+
+    revealedTextContainer.style.maxHeight = `${revealedText.offsetHeight}px`;
+  } else {
+
+    revealedTextContainer.style.maxHeight = '0';
+  }
+}
+    </script>
+
    </head>
 
    <body>
@@ -25,77 +64,59 @@
     <section class="content">
 
       <a class="back-button" href="index.html">
-        <img src="img/back-button.png">
+        <img src="img/back-button-blue.png">
       </a>
       <h4>II.</h4>
       <h1>THE HIGH PRIESTESS</h1>
-      <div class="right-bar"></div>
+      <!--<div class="right-bar"></div>-->
       <div class="bottom-bar"></div>
 
 
       <div class="keywords-group">
-        <li class="keyword-off">#Intuition</li>
-        <li class="keyword-off">#Unconscious</li>
-        <li class="keyword-off">#Inner voice</li>
-        <li class="keyword-off">#Sacred knowledge</li>
+        <li class="keyword-off" onclick="toggleText(this, '#1')">#Unconscious</li>
+        <li class="keyword-off" onclick="toggleText(this, '#2')">#Intuition</li>
+        <li class="keyword-off" onclick="toggleText(this, '#3')">#Spirituality</li>
+        <li class="keyword-off" onclick="toggleText(this, '#4')">#Inner voice</li>
       </div>
 
 
-      <div class="keyword-dropdown">
-        <img src="img/keyword-dropdown-box.png" 
-        style="margin-top: 8px; width: 100%;">
-        <div class="keyword-dropdown-txt">
+      <div class="revealed-text-container">
+        <div class="revealed-text">
         Start a new adventure / Take a new path / Enter a new phase
         </div> 
       </div>
        
 
       <p>
-        While The Magician is the guardian of the conscious mind and the tangible world, The High Priestess is the guardian of the subconscious mind and the teacher of sacred knowledge and hidden mysteries. Sitting at the threshold of the conscious and subconscious mind, The High Priestess has an innate ability to travel between these realms effortlessly. She teaches you that the world is not always as it seems and more profound influences are often at play. She ushers you through the thin veil of awareness, offering you a deep, intuitive understanding of the Universe and a heightened awareness of secret or hidden information.
+        The meaning of the High Priestess is related with inner knowledge. Her appearance in a reading can signify that it is time for you to listen to your intuition rather than prioritizing your intellect and conscious mind. When the High Priestess shows up it can depict an archetype known as the divine feminine - the mysterious female that understands and holds the answers to the deep unknowns; religion, self, nature. She represents someone that is intuitive, and beginning to open to her or his spirituality. Meditation, prayer and new spiritual work is indicated. 
         <br><br>
-        The High Priestess signifies spiritual enlightenment, inner illumination, divine knowledge and wisdom. Now is the time to be still so you can tune in to your intuition. The answers you are seeking will come from within, from your deepest truth and ‘knowing’. Allow The High Priestess to become your guide as you venture deep into your subconscious mind and access this inner wisdom. Connect with your intuition and your Higher Self through meditation, visualization, shamanic journeying, and being part of spiritual communities.
-      </p>
 
+        The card itself shows a night-time scene, meaning that the world in which she protects and guards is one that may at first seem frightening, but has the potential to lead us into the growth of the self. When she appears in a reading, she is calling to you to listen to her message, and follow her into your own depths. There is searching within yourself to be done for the answers that you seek. The answers to the questions you have are within, not without.
       <div class="accordion">
         <input type="checkbox" id="faq-1">
-        <h2>JOB<label for="faq-1" style="margin-left: 595px;"></label></h2>
-        <div class="accordion-bottom-bar"></div>
-        <div class="txt">
-          <p>It is a time when high-quality education, which is nutritious learning, sprouts. It’s a time when you have a strong intellectual desire, such as suddenly returning to school or studying to upgrade. 
-            On the one hand, <span style="color: #4E5EF6;"> you can take the opportunity to get the information that can be helpful or meet helpers.</span></p>
-        </div>
-      </div>
-      <div class="accordion">
-        <input type="checkbox" id="faq-2">
-        <h2 style="margin-top: 20px;">LOVE<label for="faq-2" style="margin-left: 560px;"></label></h2>
+        <h2 style="margin-top: 0px; margin-bottom: 20px;">CAREER<label for="faq-1"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>
-            A love that maintains a calm appearance with inner passion and intimacy and maintains patience. 
-            However, <span style="color: #4E5EF6;">the daily life of a romantic relationship may suddenly turn into a passion. </span>
-            And above all, it's a time when intuition, that is, the touch, fits well. 
-            If you're a man, you'll be able to meet a very attractive woman and fall in love, and if you're a woman, it's a time when you're confident and have full of passion. 
-            It's a card that a relationship can face strong or sudden temptations.
-          </p>
-        </div>
+            When it comes to your career, the High Priestess may signal a period of education or higher learning. You may be returning to school for training. If you’re in a creative field, this card also can suggest new inspiration coming into your work. When making big choices about your future career or projects, the High Priestess also suggests relying on your gut instincts. There’s likely a lot of information there that will aid you. At times, this card can also signal the appearance of a mentor or guide that can help you progress further in your work.        </div>
+      </div>
+      <div class="accordion">
+        <input type="checkbox" id="faq-2">
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">LOVE<label for="faq-2"></label></h2>
+        <div class="accordion-bottom-bar"></div>
+        <div class="txt">
+          <p>
+            The High Priestess in a love tarot reading can signal almost imperceptible and unconscious changes in one's emotional state. A calm surface can hide intense emotions, and even seemingly simple dates can turn into raging passions. The High Priestess tarot love meaning suggests that one needs patience, and trust for your intuition. Be honest with others and yourself, and let what is hidden come to the surface.
+
+            In a relationship, the High Priestess shows increasing intimacy and openness. In a love tarot reading, this card signals that honesty is essential to making your relationship as strong as it can be.        </div>
       </div>
       <div class="accordion">
         <input type="checkbox" id="faq-3">
-        <h2 style="margin-top: 20px;">MONEY<label for="faq-3" style="margin-left: 500px;"></label></h2>
-        <div class="accordion-bottom-bar"></div>
-        <div class="txt">
-          <p>It is a time when high-quality education, which is nutritious learning, sprouts. It’s a time when you have a strong intellectual desire, such as suddenly returning to school or studying to upgrade. 
-            On the one hand, <span style="color: #4E5EF6;"> you can take the opportunity to get the information that can be helpful or meet helpers.</span></p>
-        </div>
-      </div>
-      <div class="accordion">
-        <input type="checkbox" id="faq-4">
-        <h2 style="margin-top: 20px;">HEALTH<label for="faq-4" style="margin-left: 495px;"></label></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">FINANCES<label for="faq-3"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt" style="margin-bottom: 70px;">
-          <p>It is a time when high-quality education, which is nutritious learning, sprouts. It’s a time when you have a strong intellectual desire, such as suddenly returning to school or studying to upgrade. 
-            On the one hand, <span style="color: #4E5EF6;"> you can take the opportunity to get the information that can be helpful or meet helpers.</span></p>
-        </div>
+          <p>
+            Since the High Priestess is related to mystery and the unknown, be wary of discussing your finances with others. This card suggests keeping your financial situation hidden. Alternatively, if you’re being presented with the opportunity to put your finances into use, your intuition will know whether this is a good choice or not. Take some time to probe your feelings; if there are red-flags, something won’t feel right. Listen to those feelings.        </div>
       </div>
 
     </section>

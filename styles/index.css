@@ -93,7 +93,10 @@ body {
 
 .theme-switch {
   display: flex;
+  position: absolute;
   justify-content: center;
+  top: 30px;
+  right: 30px;
 }
 
 .theme-switch .checkbox {
@@ -303,8 +306,17 @@ li {
 
 /* cards */
 .cards {
+  display: none;
   position:absolute;
-  height: 60%;
+  height: 50%;
+  width: 80%;
+  left: 10%;
+  margin-top: 40px;
+}
+
+.cards-dark {
+  position:absolute;
+  height: 50%;
   width: 80%;
   left: 10%;
   margin-top: 40px;
@@ -330,9 +342,36 @@ li {
     transform: translate(-50%, -50%) rotate(-10deg);
   }
 
-.card1 {
+.cards-dark:hover .card1 {
+  transform: translate(-50%, -50%) rotate(10deg);
+}
+
+.cards-dark:hover .card2 {
+    transform: translate(-50%, -50%) rotate(5deg);
+  }
+
+.cards-dark:hover .card3 {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+  
+.cards-dark:hover .card4 {
+    transform: translate(-50%, -50%) rotate(-5deg);
+  }
+
+.cards-dark:hover .card5 {
+    transform: translate(-50%, -50%) rotate(-10deg);
+  }
+
+.light .cards-dark {
+  display: none;
+}
+
+.light .cards {
+  display: block;
+}
+
+.cards-dark .card1 {
   background: white;
-  background-size: cover;
   height: 480px;
   width: 305px;
   border-radius: 10px;
@@ -345,7 +384,7 @@ li {
   transform: translate(-50%, -50%) rotate(0deg);
 }
 
-.card2 {
+.cards-dark .card2 {
     background: white;
     background-size: cover;
     height: 480px;
@@ -360,7 +399,7 @@ li {
     transform: translate(-50%, -50%) rotate(0deg);
   }
 
-.card3 {
+.cards-dark .card3 {
     background: white;
     background-size: cover;
     height: 480px;
@@ -375,7 +414,7 @@ li {
     transform: translate(-50%, -50%) rotate(0deg);
   }  
   
-.card4 {
+.cards-dark .card4 {
     background: white;
     background-size: cover;
     height: 480px;
@@ -390,9 +429,8 @@ li {
     transform: translate(-50%, -50%) rotate(0deg);
   }
 
-.card5 {
+.cards-dark .card5 {
     background: white;
-    background-size: cover;
     height: 480px;
     width: 305px;
     border-radius: 10px;
@@ -405,6 +443,73 @@ li {
     transform: translate(-50%, -50%) rotate(0deg);
   }
 
+.cards .card1 {
+  background: white;
+  height: 480px;
+  width: 305px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center 120%;
+  transition: transform 1s ease-out;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.cards .card2 {
+    background: white;
+    background-size: cover;
+    height: 480px;
+    width: 305px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center 120%;
+    transition: transform 1s ease-out;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+.cards .card3 {
+    background: white;
+    background-size: cover;
+    height: 480px;
+    width: 305px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center 120%;
+    transition: transform 1s ease-out;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }  
+  
+.cards .card4 {
+    background: white;
+    background-size: cover;
+    height: 480px;
+    width: 305px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center 120%;
+    transition: transform 1s ease-out;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+.cards .card5 {
+    background: white;
+    height: 480px;
+    width: 305px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center 120%;
+    transition: transform 1s ease-out;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
 
 footer {
     padding: 45px 0 40px;

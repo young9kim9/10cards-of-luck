@@ -10,6 +10,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/nlm5qrt.css">
+
+    <script>
+      function toggleText(element, keyword) {
+  const revealedTextContainer = document.querySelector('.revealed-text-container');
+  const revealedText = document.querySelector('.revealed-text');
+
+  const isActive = element.classList.contains('active');
+
+  const keywordOffElements = document.querySelectorAll('.keyword-off');
+  keywordOffElements.forEach((el) => el.classList.remove('active'));
+
+  if (!isActive) {
+    element.classList.add('active');
+
+    switch (keyword) {
+      case '#1':
+        revealedText.innerHTML = 'Start a new adventure / Take a new path / Enter a new phase';
+        break;
+      case '#2':
+        revealedText.innerHTML = 'Live in the present / Perform unexpected things / Surprise someone';
+        break;
+      case '#3':
+        revealedText.innerHTML = 'Believe in what happens suddenly / Always open / Feeling protected and loved';
+        break;
+      case '#4':
+        revealedText.innerHTML = 'Embrace your own choices / Be honest with yourself / Pursuing ideal dreams';
+        break;
+      default:
+        revealedText.innerHTML = 'Default content';
+    }
+
+    revealedTextContainer.style.maxHeight = `${revealedText.offsetHeight}px`;
+  } else {
+
+    revealedTextContainer.style.maxHeight = '0';
+  }
+}
+    </script>
+
    </head>
 
    <body>
@@ -27,57 +66,69 @@
       </a>
       <h4>VI.</h4>
       <h1>THE LOVERS</h1>
-      <div class="right-bar"></div>
+      <!--<div class="right-bar"></div>-->
       <div class="bottom-bar"></div>
 
 
       <div class="keywords-group">
-        <li class="keyword-off">#Relationships</li>
-        <li class="keyword-off">#Choices</li>
-        <li class="keyword-off">#Romance</li>
-        <li class="keyword-off">#Unions</li>
+        <li class="keyword-off" onclick="toggleText(this, '#1')">#Love</li>
+        <li class="keyword-off" onclick="toggleText(this, '#2')">#Unions</li>
+        <li class="keyword-off" onclick="toggleText(this, '#3')">#Relationships</li>
+        <li class="keyword-off" onclick="toggleText(this, '#4')">#Choices</li>
+        <li class="keyword-off" onclick="toggleText(this, '#4')">#Balance</li>
       </div>
 
 
-      <div class="keyword-dropdown">
-        <img src="img/keyword-dropdown-box.png" 
-        style="margin-top: 8px; width: 100%;">
-        <div class="keyword-dropdown-txt">
-        Set up a relationship / Feel a love / Become a lover of get married / Empathy with others / Get along intimately
+      <div class="revealed-text-container">
+        <div class="revealed-text">
+        Start a new adventure / Take a new path / Enter a new phase
         </div> 
       </div>
        
 
       <p>
-        The primary meaning within the Lovers is harmony, attractiveness, and perfection in a relationship. 
-        The trust and the unity that the lovers have gives each of them confidence and strength, empowering the other. 
-        The bond that they have created is very strong, and it can indicate that the two are joined in marriage, and other close and intimate relationships.
-        <br><br>
+        The primary meaning within the Lovers is harmony, attractiveness, and perfection in a relationship. The trust and the unity that the lovers have gives each of them confidence and strength, empowering the other. The bond that they have created is very strong, and it can indicate that the two are joined in marriage, and other close and intimate relationships.
+                <br><br>
 
-        Another meaning behind the lovers card is the concept of choice - a choice between things that are opposing and mutually exclusive. This could be a dilemma that you need to think about carefully and make the best decision for your situation.
+                Another meaning behind the lovers card is the concept of choice - a choice between things that are opposing and mutually exclusive. This could be a dilemma that you need to think about carefully and make the best decision for your situation.
 
-        A more personal Lovers meaning that can apply to individuals is the development of your own personal belief systems, regardless of what are the societal norms. We see this as a development from the Hierophant, who made decrees and passed on his knowledge through a standardized system. This is one of the times when you figure out what you are going to stand for, and what your philosophy in life will truly be. You must start making up your mind about what you find important and unimportant in your life. You should be as true to yourself as you can be, so you will be genuine and authentic to the people who are around you.      </p>
+                A more personal Lovers meaning that can apply to individuals is the development of your own personal belief systems, regardless of what are the societal norms. We see this as a development from the Hierophant, who made decrees and passed on his knowledge through a standardized system. This is one of the times when you figure out what you are going to stand for, and what your philosophy in life will truly be. You must start making up your mind about what you find important and unimportant in your life. You should be as true to yourself as you can be, so you will be genuine and authentic to the people who are around you.
+      </p>
 
-      <div class="accordion">
+
+        <div class="accordion">
         <input type="checkbox" id="faq-1">
-        <h2>CAREER<label for="faq-1" style="margin-left: 494px;"></label></h2>
+        <h2 style="margin-top: 0px; margin-bottom: 20px;">CAREER<label for="faq-1"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>
-            Sometimes, the Lovers can signal a business partnership, or a relationship with a colleague that is harmonious and beneficial to both parties. 
-            The Lovers card, contrary to popular belief, can also symbolize partnerships of a platonic kind, though at times, this can also signal a romantic relationship that can blossom. If this does happen, make sure you understand the kinds of risk that you open yourself up to, and make a decision both with your head as well as your heart. The Lovers tarot card can also suggest that there are big decisions that you need to make when it comes to your future career. You may be at a crossroads, or shifting from one path to another, or you may need to make choices between your work and other aspects of your life.
-        </p>
-        </div>
-      </div>
+
+            Another meaning behind the lovers card is the concept of choice - a choice between things that are opposing and mutually exclusive. This could be a dilemma that you need to think about carefully and make the best decision for your situation.
+
+            A more personal Lovers meaning that can apply to individuals is the development of your own personal belief systems, regardless of what are the societal norms. We see this as a development from the Hierophant, who made decrees and passed on his knowledge through a standardized system. This is one of the times when you figure out what you are going to stand for, and what your philosophy in life will truly be. You must start making up your mind about what you find important and unimportant in your life. You should be as true to yourself as you can be, so you will be genuine and authentic to the people who are around you.
+                     </p>
+          </div>
+          </div>
+      <div class="accordion">
+        <input type="checkbox" id="faq-2">
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">LOVE<label for="faq-2"></label></h2>
+        <div class="accordion-bottom-bar"></div>
+        <div class="txt">
+          <p>
+            When it comes to love and relationships, the Lovers card can be a welcome sight to any seeker. The Lovers tarot card signals a wonderful cohesiveness and balance of forces, indicating complimentary energies. This card represents a pair that works well together. On the other hand, because this card also symbolizes choice, and the choice of commitment, it also raises questions of how committed you are to love. This doesn’t have to refer exclusively to another person, but can also indicate a choice between love or work, love or family, love or friendship, or even sometimes love and your entire lifestyle. The idea here is that there may be a sacrifice that you must make in order to have this love. In some ways, all commitment is a sacrifice, but one made for the right person can help you grow as an individual. The choices and sacrifices that need to be made can apply to both you, a potential or existing partner.
+                    </p>
+          </div>
+          </div>
       <div class="accordion">
         <input type="checkbox" id="faq-3">
-        <h2 style="margin-top: 20px;">FINANCES<label for="faq-3" style="margin-left: 437px;"></label></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">FINANCES<label for="faq-3"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt" style="margin-bottom: 70px;">
           <p>
-            When it comes to finances, the Lovers card can suggest that big financial decisions need to be made. You may have to choose between having one big expense versus another; the important thing to remember is that it seems like you can’t have both. One path closes the door to another path, and your choices may have larger impacts in the future.          </p>
-        </div>
-      </div>
+            When it comes to finances, the Lovers card can suggest that big financial decisions need to be made. You may have to choose between having one big expense versus another; the important thing to remember is that it seems like you can’t have both. One path closes the door to another path, and your choices may have larger impacts in the future.
+                    </p>
+          </div>
+          </div>
 
     </section>
    </main>

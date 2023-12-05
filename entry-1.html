@@ -8,6 +8,44 @@
 		<link href="styles/entry-1.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/nlm5qrt.css">
+
+    <script>
+      function toggleText(element, keyword) {
+  const revealedTextContainer = document.querySelector('.revealed-text-container');
+  const revealedText = document.querySelector('.revealed-text');
+
+  const isActive = element.classList.contains('active');
+
+  const keywordOffElements = document.querySelectorAll('.keyword-off');
+  keywordOffElements.forEach((el) => el.classList.remove('active'));
+
+  if (!isActive) {
+    element.classList.add('active');
+
+    switch (keyword) {
+      case '#1':
+        revealedText.innerHTML = 'Start a new adventure / Take a new path / Enter a new phase';
+        break;
+      case '#2':
+        revealedText.innerHTML = 'Live in the present / Perform unexpected things / Surprise someone';
+        break;
+      case '#3':
+        revealedText.innerHTML = 'Believe in what happens suddenly / Always open / Feeling protected and loved';
+        break;
+      case '#4':
+        revealedText.innerHTML = 'Embrace your own choices / Be honest with yourself / Pursuing ideal dreams';
+        break;
+      default:
+        revealedText.innerHTML = 'Default content';
+    }
+
+    revealedTextContainer.style.maxHeight = `${revealedText.offsetHeight}px`;
+  } else {
+
+    revealedTextContainer.style.maxHeight = '0';
+  }
+}
+    </script>
    </head>
 
    <body>
@@ -25,37 +63,37 @@
       </a>
       <h4>0.</h4>
       <h1>THE FOOL</h1>
-      <div class="right-bar"></div>
+      <!--<div class="right-bar"></div>-->
       <div class="bottom-bar"></div>
 
 
       <div class="keywords-group">
-        <li class="keyword-off">#Start</li>
-        <li class="keyword-off">#Spontaneous</li>
-        <li class="keyword-off">#Trust</li>
-        <li class="keyword-off">#Crazy about sth</li>
+        <li class="keyword-off" onclick="toggleText(this, '#1')">#Beginnings</li>
+        <li class="keyword-off" onclick="toggleText(this, '#2')">#Freedom</li>
+        <li class="keyword-off" onclick="toggleText(this, '#3')">#Trust</li>
+        <li class="keyword-off" onclick="toggleText(this, '#4')">#Idealism</li>
       </div>
 
 
-      <div class="keyword-dropdown">
-        <img src="img/keyword-dropdown-box.png" 
-        style="margin-top: 8px; width: 100%;">
-        <div class="keyword-dropdown-txt">
+      <div class="revealed-text-container">
+        <div class="revealed-text">
         Start a new adventure / Take a new path / Enter a new phase
         </div> 
       </div>
        
 
       <p>
-        The Fool card represents the beginning of a new life. It suggests the starting point of a new beginning, business, job, project, adventure, etc. You are an optimist who has a clear direction in which you want to go, but don't know how, so you move forward blindly. You also don’t listen to the advice of those around you. Like Don Quixote, you make a new start with great enthusiasm, but the helpers around you are only a few.
+        The Fool card is numbered 0, which is considered to be a number of infinite potential. Consider him a blank slate, for The Fool has yet to develop a clear personality. He is the symbol of innocence - his journey to come will shape his character yet.
+
+        To see the The Fool generally means a beginning of a new journey, one where you will be filled with optimism and freedom from the usual constraints in life. When we meet him, he approaches each day as an adventure, in an almost childish way. He believes that anything can happen in life and there are many opportunities that are lying out there, in the world, waiting to be explored and developed. He leads a simple life, having no worries, and does not seem troubled by the fact that he cannot tell what he will encounter ahead.
         <br><br>
-        The Fool card is a card of new beginnings, opportunities, and potential. Like a reckless youth, you too are at the beginning of your journey, standing at the edge of a precipice and about to take your first step into the unknown. You don't know exactly where you’re going, but being called to commit yourself and follow your heart, no matter how crazy this leap of faith may seem. As beginning this new journey, the traveler or fool becomes open-minded, curious, and excited. It's about letting go of the fear, worry, and anxiety about what might happen or not, and preparing to embrace the unknown. It's about new experiences, personal growth, development, and adventure.
-      </p>
+
+        To meet him in a reading can also be seen as a call to the risk-taking part of your own character. He inspires courage, for he understands that every day is a chance to open up new areas in your life, and with that comes a mixture of anticipation, wonder, awe and curiosity. The Fool is there to show that you can never really tell what lies ahead, and you can only greet it with joy.      </p>
 
 
       <div class="accordion">
         <input type="checkbox" id="faq-1">
-        <h2>JOB<img src="img/arrow-down-purple.png" for="faq-1" style="margin-left: 595px;"></h2>
+        <h2 style="margin-top: 0px; margin-bottom: 20px;">CAREER<label for="faq-1"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>Others may not understand or support your new ideas or suggestions. But if you know you're right,
@@ -66,7 +104,7 @@
       </div>
       <div class="accordion">
         <input type="checkbox" id="faq-2">
-        <h2 style="margin-top: 20px;">LOVE<img src="img/arrow-down-purple.png" for="faq-2" style="margin-left: 560px;"></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">LOVE<label for="faq-2"></label></h2>
         <div class="accordion-bottom-bar"></div>
         <div class="txt">
           <p>
@@ -78,9 +116,9 @@
       </div>
       <div class="accordion">
         <input type="checkbox" id="faq-3">
-        <h2 style="margin-top: 20px;">MONEY<img src="img/arrow-down-purple.png"l for="faq-3" style="margin-left: 500px;"></h2>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">FINANCES<label for="faq-3"></label></h2>
         <div class="accordion-bottom-bar"></div>
-        <div class="txt">
+        <div class="txt" style="margin-bottom: 70px;">
           <p>
             If you've ever wanted to start a new career, change career, get a promotion, or even start your own adventure, this card could be your best card.
             This card energizes old projects, even if new drastic changes are coming or not planned.
@@ -88,14 +126,6 @@
             As far as finances are concerned, you may be in a period of improvisation and idealism.
             <span style="color: #4E5EF6;">Think of all your current spending as an investment or experience for the future.</span>
           </p>
-        </div>
-      </div>
-      <div class="accordion">
-        <input type="checkbox" id="faq-4">
-        <h2 style="margin-top: 20px;">HEALTH<img src="img/arrow-down-purple.png" for="faq-4" style="margin-left: 495px;"></h2>
-        <div class="accordion-bottom-bar"></div>
-        <div class="txt" style="margin-bottom: 70px;">
-          <p></p>
         </div>
       </div>
 
